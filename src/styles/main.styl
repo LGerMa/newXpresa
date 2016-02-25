@@ -1,2 +1,63 @@
+@import('./normalize.css')
+@import('./reset')
+/*TEXTOS*/
+$CelesteText = #04BAEE
+$VerdeText = #C0D356
+$GrisText = #9C9B9B
+$PlaceholderText = #EDEDED
+$FooterText = #FFF
+
+/*DESKTOP, TABLETS Y CELULARES*/
+$Celeste = #04BAEE
+$Gris = #727272
+@font-face
+	font-family 'Titulos'
+	src url('../fonts/Geomanist-Regular.otf')
 body
-	background-color red
+	font-family 'Titulos'
+	font-size 16px
+	.global
+		.header
+			position fixed
+			top 0
+			left 0
+			width 100vw
+			&-img-button
+				position relative
+				top 0
+				left 10px
+				width 25px
+				heigth 25px
+		.menu-lista
+			width 100vw
+			heigth 100vh
+			position absolute
+			top 0
+			left -100vw
+			background-color black
+			opacity 0.8
+			transition left 0.3s ease-in
+			text-align center
+			display flex
+			flex-direction column
+			
+			&.active
+				left 0
+			img
+				align-self flex-end
+			.flex-menu
+				img
+					width 50%
+				&-item
+					margin 0 20vw
+					font-size 20px
+					heigth 80px
+					line-height 80px
+					border-bottom 1px solid white
+					font-family 'Titulos'
+					&-link
+						text-transform uppercase
+						display block
+						text-decoration none
+						color $VerdeText
+			
