@@ -1,0 +1,22 @@
+DEPENDENCIAS DE NODE JS
+
+1. GULP
+2. WEBSERVER
+3. NIB
+4. STYLUS
+5. MINIFYCSS
+6. JADE
+
+/*
+
+crear carpeta del proyecto
+-Dentro crear carpetas build, dist, src
+
+Instalando dependencias
+npm init
+npm install --save-dev gulp
+npm install --save-dev gulp-webserver
+					   nib
+					   gulp-stylus
+					   gulp-minify-css
+					   gulp-jade

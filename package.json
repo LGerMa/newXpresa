@@ -1,0 +1,19 @@
+{
+  "name": "xpresa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LGerMa",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-stylus": "^2.3.0",
+    "gulp-webserver": "^0.9.1",
+    "nib": "^1.1.0"
+  }
+}
