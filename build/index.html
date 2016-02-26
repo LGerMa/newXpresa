@@ -9,9 +9,9 @@
   <body>
     <div class="global">
       <header class="header">
-        <div><img src="./img/menuiconhome.png" class="header-img-button"></div>
+        <div><img src="./img/menuiconhome.png" id="img-boton-menu" class="header-img-button"></div>
         <nav>
-          <ul class="menu-lista active"><img src="./img/close.png">
+          <ul id="menu-movil" class="menu-lista"><img src="./img/close.png" id="img-boton-cerrar">
             <div class="flex-menu"><img src="./img/logowhite.png">
               <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">Home</a></li>
               <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">Servicios</a></li>
@@ -21,6 +21,39 @@
           </ul>
         </nav>
       </header>
+      <div id="contenedor" class="contenedor">
+        <h1>Hola Mundo</h1>
+      </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js"></script>
+    <script>
+      (function(){
+          var btn_menu = document.getElementById("img-boton-menu");
+          var menu = document.getElementById("menu-movil");
+          var btn_cerrar = document.getElementById("img-boton-cerrar");
+          var hammer_panel = new Hammer(document.querySelector("#contenedor"));
+          var hammer_side = new Hammer(menu);
+      
+          hammer_panel.on("swiperight",function(){
+              menu.classList.toggle('active');
+              btn_menu.style.display ='none';
+          });
+      
+          hammer_side.on("swipeleft",function(){
+              menu.classList.toggle('active');
+              btn_menu.style.display ='inline';
+          });
+      
+          btn_menu.addEventListener("click",function(){
+              menu.classList.toggle('active');
+              btn_menu.style.display='none';
+          });
+      
+          btn_cerrar.addEventListener("click",function(){
+              menu.classList.toggle('active');
+              btn_menu.style.display='inline';
+          });
+      }());
+    </script>
   </body>
 </html>
