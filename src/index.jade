@@ -1,56 +1,89 @@
 doctype html
-html(lang='es')
+html(lang='en')
     head
-        meta(charset='UTF-8')
-        meta(name='viewport',content='width=device-width,user-scalable=no',initial-scale='1')
-        link(rel='stylesheet',href="./css/main.css")
-        title XpresaWeb
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, user-scalable=no", initial-scale="1")
+        link(rel="stylesheet", type="text/css", href="./css/main.css")
+        title Lanza tus mejores ideas!
+        
     body
         div(class="global")
             header(class="header")
                 div
-                    img(src="./img/menuiconhome.png",class="header-img-button",id="img-boton-menu")
+                    img(class="header-button", id="botoncito",src="./img/menuiconhome.png")
                 nav
-                    ul(class="menu-lista",id="menu-movil")
-                        img(src="./img/close.png",id="img-boton-cerrar")
+                    ul(id="mimenu",class="Menu-lista")
+                        img(src="./img/close.png", class="cerrar", id="close")
                         div(class="flex-menu")
-                            img(src="./img/logowhite.png")
+                            div
+                                img(src="./img/logowhite.png")
                             li(class="flex-menu-item")
-                                a(href="#",class="flex-menu-item-link") Home
+                                a(href="#", class="flex-menu-item-link") HOME
                             li(class="flex-menu-item")
-                                a(href="#",class="flex-menu-item-link") Servicios
+                                a(href="#", class="flex-menu-item-link") SERVICIOS
                             li(class="flex-menu-item")
-                                a(href="#",class="flex-menu-item-link") Equipo
+                                a(href="#", class="flex-menu-item-link") EQUIPO
                             li(class="flex-menu-item")
-                                a(href="#",class="flex-menu-item-link") Contacto
-            div(id="contenedor",class="contenedor")
-                h1 Hola Mundo
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js")
-        script.
-            (function(){
-                var btn_menu = document.getElementById("img-boton-menu");
-                var menu = document.getElementById("menu-movil");
-                var btn_cerrar = document.getElementById("img-boton-cerrar");
-                var hammer_panel = new Hammer(document.querySelector("#contenedor"));
-                var hammer_side = new Hammer(menu);
+                                a(href="#", class="flex-menu-item-link") CONTACTO
+            article(id="contenedor",class="content")
+                section(class="content-slide")
+                    picture
+                        source(media="(min-width: 1024px)", srcset="./img/slide-1-desktop.jpg")
+                        source(media="(min-width: 768px)", srcset="./img/slide-1-mobileretina.jpg 2x")
+                        source(media="(min-width: 320px)", srcset="./img/slide-1-mobile.jpg")
+                        img(src="./img/slide-1-mobile.jpg")
+                div(class="content-text-efecto")
+                    div(class="content-text-efecto-encima")
+                        p(class="titulo") ¿Que hacemos?
+                        p(class="texto") Somos una agencia de desarrollo web, e imagen de marca, contamos con un equipo con experiencia en cada uno de esos campos que te aseguraran la calidad y eficiencia del trabajo. Nos encargamos de innovar y brindarte soluciones únicas y de vanguardia que llevarán tu marca al siguiente nivel.
 
-                hammer_panel.on("swiperight",function(){
-                    menu.classList.toggle('active');
-                    btn_menu.style.display ='none';
-                });
+                        p(class="texto") La informática y el Diseño Gráfico, hoy en día nos ayuda a impulsar a pequeñas y grandes empresas llevándolos a escalar dentro del mercado gracias a nuevas herramientas digitales con altos estándares de calidad acompañado de nuestro equipo especializado.
+                        picture
+                            source(media="(min-width: 1024px)", srcset="./img/banner_service-desktop.jpg")
+                            source(media="(min-width: 768px)", srcset="./img/banner_service-mobileretina.jpg 2x")
+                            source(media="(min-width: 320px)", srcset="./img/banner_service-mobile.jpg")
+                            img(src="./img/banner_service-mobile.jpg")
+                        div(class="encima-footer")
+                            h2(class="encima-footer-titulo") ¿De qué manera podemos ayudarte?
+                            p(class="encima-footer-parrafo") Conoce nuestros principales servicios
+                            button(class="encima-footer-button") Ver Más
+                footer
+                    p (+503 71900165)
+                    p cuentanos@xpresaweb.com
+                    p CopyRight XpresaWeb
+                    p All Right Reserver
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js")
 
-                hammer_side.on("swipeleft",function(){
-                    menu.classList.toggle('active');
-                    btn_menu.style.display ='inline';
-                });
+    script.
+        (function(){
+        var boton = document.getElementById('botoncito');
+        var menu = document.getElementById('mimenu');
+        var close = document.getElementById('close');
+        var hammerPanel = new Hammer(document.querySelector("#contenedor"));
+        var hammerSide = new Hammer(menu);
 
-                btn_menu.addEventListener("click",function(){
-                    menu.classList.toggle('active');
-                    btn_menu.style.display='none';
-                });
+        
+        hammerPanel.on('swiperight', function(){
+        menu.classList.toggle('active');
+        document.querySelector("#contenedor").classList.toggle('active');
+        boton.style.display="none";
+        });
 
-                btn_cerrar.addEventListener("click",function(){
-                    menu.classList.toggle('active');
-                    btn_menu.style.display='inline';
-                });
-            }());
+        hammerSide.on('swipeleft', function(){        
+        document.querySelector("#contenedor").classList.toggle('active');
+        menu.classList.toggle('active');
+        boton.style.display="inline";
+        });
+
+        boton.addEventListener('click', function(){
+            menu.classList.toggle('active');
+            document.querySelector("#contenedor").classList.toggle('active');
+            boton.style.display="none";
+        });
+
+        close.addEventListener('click', function(){
+            menu.classList.toggle('active');
+            document.querySelector("#contenedor").classList.toggle('active');
+            boton.style.display="inline";
+        });
+        }());

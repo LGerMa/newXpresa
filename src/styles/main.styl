@@ -1,5 +1,7 @@
-@import('./normalize.css')
-@import('./reset')
+@import ('./normalize.css')
+@import ('./reset')
+
+
 /*TEXTOS*/
 $CelesteText = #04BAEE
 $VerdeText = #C0D356
@@ -10,60 +12,138 @@ $FooterText = #FFF
 /*DESKTOP, TABLETS Y CELULARES*/
 $Celeste = #04BAEE
 $Gris = #727272
-@font-face
-	font-family 'Titulos'
-	src url('../fonts/Geomanist-Regular.otf')
+@font-face 
+  font-family 'Titulos'
+  src url('../fonts/Geomanist-Regular.otf') 
 body
-	font-family 'Titulos'
-	font-size 16px
-	.global
-		.header
-			position fixed
-			z-index 10
-			top 0
-			left 0
-			width 100vw
-			&-img-button
-				position relative
-				top 0
-				left 10px
-				width 25px
-				height 25px
-			.menu-lista
-				width 100vw
-				height 100vh
-				position absolute
-				top 0
-				left -100vw
-				background-color black
-				opacity 0.8
-				transition left 0.3s ease-in
-				text-align center
-				display flex
-				flex-direction column
-				
-				&.active
-					left 0
-				img
-					align-self flex-end
-				.flex-menu
-					img
-						width 50%
-					&-item
-						margin 0 20vw
-						font-size 20px
-						heigth 80px
-						line-height 80px
-						border-bottom 1px solid white
-						font-family 'Titulos'
-						&-link
-							text-transform uppercase
-							display block
-							text-decoration none
-							color $VerdeText
-		.contenedor
-			position relative
-			width 100vw
-			height 800px
-			background-color blue
+    font-family 'Titulos'
+    font-size 16px
+    margin 0 auto
+    color white
+    overflow-x hidden
+    .global
+        .header    
+            position fixed
+            z-index 10
+            top 0
+            left 0
+            width 100vw                    
+            &-button
+                position relative
+                left 10px
+                top 10px
+                width 25px
+                height 25px
+            .Menu-lista
+                z-index 2
+                width 100vw
+                height 100vh
+                position absolute
+                top 0
+                left -100vw
+                background-color black
+                opacity .8
+                transition left 0.3s ease-in
+                text-align center
+                display flex
+                flex-direction column
+                
+                &.active
+                    left 0
+                .cerrar
+                    align-self flex-end
+                    margin 3vh 20vw 0vh 0vw
+                .flex-menu
+                    display flex
+                    flex-direction column
+                    list-style none
+                    img
+                        margin 3vh 0vw 0vh 0vw
+                        width 50%
+                    &-item
+                        font-family 'Titulos'
+                        margin 0 20vw
+                        font-size 20px
+                        text-align center
+                        height 80px
+                        line-height 80px
+                        border-bottom: solid 1px white
+                        &-link
+                            color $VerdeText
+                            text-decoration none !important
+                            text-transform uppercase
+                            display block
+        .content
+            position relative
+            width 100vw
+            transition all .9s ease-in
+            &.active
+                filter: blur(20px); 
+                -webkit-filter: blur(20px); 
+                -moz-filter: blur(20px);
+                -o-filter: blur(20px);
+                -ms-filter: blur(20px);
+            &-slide
+                picture
+                    margin 0 auto
+                    img
+                        z-index -2
+                        width 100%
+                        height 100%
+            &-text                    
+                &-efecto
+                    position relative
+                    margin-top -80px
+                    width 0px
+                    border-left 50vw solid #fff
+                    border-right 50vw solid #fff
+                    border-top 35px solid transparent
+                    &-encima
+                        position relative
+                        margin-left -50vw
+                        width 100vw;
+                        text-align center
+                        .titulo
+                            font-weight bold
+                            font-size 40px
+                            margin 1rem 0
+                            text-transform uppercase
+                            color $VerdeText
+                        .texto
+                            line-height 1.6em
+                            padding 1rem
+                            color black
+                        picture
+                            img
+                                position relative
+                                width 100vw
+                                height 200px
+                                padding 0
+                                margin 0 0
+                        .encima-footer
+                            position relative
+                            height 160px
+                            margin-top -155px
+                            &-titulo
+                                padding 1px 3px
+                                font-size 22px
+                            &-parrafo
+                                font-size 18px
+                            &-button
+                                border none
+                                padding 8px 16px
+                                border-radius 5px
+                                background $CelesteText
+                                color white
+                                font-weight bold
+                                border-bottom solid 2px $VerdeText
+            footer
+                text-align center
+                border-top solid 10px $CelesteText
+                width 100vw
+                position relative
+                left 0
+                bottom 0
+                height 150px    
+                background $Gris 
 			
