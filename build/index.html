@@ -9,15 +9,20 @@
   <body>
     <div class="global">
       <header class="header">
-        <div><img id="botoncito" src="./img/menuiconhome.png" class="header-button"></div>
+        <div class="header-txt"><img id="botoncito" src="./img/menuiconhome.png" class="header-txt-button"><img src="./img/logo.png" class="header-txt-logo">
+          <div class="header-txt-titulos">
+            <h1>BIENVENIDO</h1>
+            <h4>Bienvenido <span>&#62; Home</span></h4>
+          </div>
+        </div>
         <nav>
           <ul id="mimenu" class="Menu-lista"><img src="./img/close.png" id="close" class="cerrar">
             <div class="flex-menu">
               <div><img src="./img/logowhite.png"></div>
-              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">HOME</a></li>
-              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">SERVICIOS</a></li>
-              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">EQUIPO</a></li>
-              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">CONTACTO</a></li>
+              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">Home</a></li>
+              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">Servicios</a></li>
+              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">Equipo</a></li>
+              <li class="flex-menu-item"><a href="#" class="flex-menu-item-link">Contacto</a></li>
             </div>
           </ul>
         </nav>
@@ -37,7 +42,7 @@
             <p class="texto">La informática y el Diseño Gráfico, hoy en día nos ayuda a impulsar a pequeñas y grandes empresas llevándolos a escalar dentro del mercado gracias a nuevas herramientas digitales con altos estándares de calidad acompañado de nuestro equipo especializado.</p>
             <picture>
               <source media="(min-width: 1024px)" srcset="./img/banner_service-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="./img/banner_service-mobileretina.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/banner-service-mobileretina.jpg 2x">
               <source media="(min-width: 320px)" srcset="./img/banner_service-mobile.jpg"><img src="./img/banner_service-mobile.jpg">
             </picture>
             <div class="encima-footer">
@@ -58,6 +63,7 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js"></script>
   <script>
+    
     (function(){
     var boton = document.getElementById('botoncito');
     var menu = document.getElementById('mimenu');
@@ -72,23 +78,24 @@
     boton.style.display="none";
     });
     
-    hammerSide.on('swipeleft', function(){        
+    hammerSide.on('swipeleft', function(){		
     document.querySelector("#contenedor").classList.toggle('active');
     menu.classList.toggle('active');
     boton.style.display="inline";
     });
     
     boton.addEventListener('click', function(){
-        menu.classList.toggle('active');
-        document.querySelector("#contenedor").classList.toggle('active');
-        boton.style.display="none";
+    	menu.classList.toggle('active');
+    	document.querySelector("#contenedor").classList.toggle('active');
+    	boton.style.display="none";
     });
     
     close.addEventListener('click', function(){
-        menu.classList.toggle('active');
-        document.querySelector("#contenedor").classList.toggle('active');
-        boton.style.display="inline";
+    	menu.classList.toggle('active');
+    	document.querySelector("#contenedor").classList.toggle('active');
+    	boton.style.display="inline";
     });
+    
     }());
   </script>
 </html>

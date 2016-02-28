@@ -1,12 +1,12 @@
 {
-  "name": "xpresa",
+  "name": "xpresaweb",
   "version": "1.0.0",
-  "description": "",
+  "description": "WebSite XpresaWeb ¡Lanza tus mejores ideas! optimizado desde 0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "LGerMa",
+  "author": "Leonel Zavaleta",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",

@@ -1,0 +1,36 @@
+Desktop: 1920 x 1200px
+Tablet: 1024 x 768px
+Mobile: 640 x 1024px
+
+Rectangulos contenedores: 
+Gris oscuro: #EDEDED
+Gris claro #F6F6F6
+
+team photos
+size desktop: 349 x 675px
+size tablet: 193 x 374px
+size mobile: 266 x 515px
+
+Textos
+Celeste: #04BAEE
+Verde: #C0D356
+gris: #9C9B9B
+placeholder: #EDEDED
+Footer: #FFF
+
+Tipos:
+Título: Geomanist  
+Texto: Junction ligth  (bold para subtítulos)
+
+Footer:
+	Desktop:
+	Celeste: #04BAEE 1920 x 11px
+	Gris: #727272 1920 x 190px
+	
+	Tablet: 
+	Celeste: #04BAEE 1024 x 11px 
+	Gris: #727272 1024 x 130px
+
+	Mobile:
+	Celeste: #04BAEE 640 x 11px
+	Gris: #727272 640 x 248px
