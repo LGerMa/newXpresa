@@ -1,0 +1,64 @@
+.header
+	width 100vw
+	height 100px
+	background white
+	display flex
+	flex-wrap wrap
+	flex-direction row
+	justify-content space-between
+	//background-image url('../img/header.png')
+	background-size cover
+	&-txt
+		display flex
+		flex-direction row
+		&-button
+			display none
+		&-titulos
+			font-family 'Titulos'
+			display flex
+			flex-direction column
+			h1
+				color $CelesteText
+				margin 20px 15px 10px 15px
+			h4
+				color $GrisText
+				margin-left 15px
+				span
+					color $VerdeText
+				
+		&-logo
+			display inline
+			margin-left 20px
+			margin-top 20px
+			width 90px
+			height 60px
+			padding 0 15px 0 0
+			border-right solid 2px $GrisText
+	.Menu-lista
+		background transparent
+		position static
+		width auto
+		height auto
+		opacity 1
+		.cerrar
+			display none
+		.flex-menu
+			img
+				display none
+			&-item
+				display inline-block
+				font-family 'Titulos'
+				margin 0
+				padding 0vw 3vw
+				margin 25px 0vh
+				font-size 16px
+				height 30px
+				line-height 30px
+				border-bottom 0px
+				border-right solid 1px $VerdeText
+			&-item:nth-child(5)
+				border-right 0px
+				&-link
+					color $VerdeText
+					text-decoration none !important
+					display block
