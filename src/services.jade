@@ -3,7 +3,7 @@ html(lang='en')
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, user-scalable=no", initial-scale="1")
-		link(rel="stylesheet", type="text/css", href="./css/main.css")
+		link(rel="stylesheet", type="text/css", href="./css/services.css")
 		title Lanza tus mejores ideas!
 	body
 		div(class="global")
@@ -16,26 +16,13 @@ html(lang='en')
 						h4 Bienvenido 
 							span &#62; Servicios
 				nav
-					ul(id="mimenu",class="Menu-lista")
-						img(src="./img/close.png", class="cerrar", id="close")
-						div(class="flex-menu")
-							div
-								img(src="./img/logowhite.png")
-							li(class="flex-menu-item")
-								a(href="index.html", class="flex-menu-item-link") Home
-							li(class="flex-menu-item")
-								a(href="services.html", class="flex-menu-item-link") Servicios
-							li(class="flex-menu-item")
-								a(href="#", class="flex-menu-item-link") Equipo
-							li(class="flex-menu-item")
-								a(href="#", class="flex-menu-item-link") Contacto
-	h1 Prueba
+					include ./menu.jade
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js")
 
 	script.
 
 		
-		/*(function(){
+		(function(){
 		var boton = document.getElementById('botoncito');
 		var menu = document.getElementById('mimenu');
 		var close = document.getElementById('close');
@@ -67,4 +54,4 @@ html(lang='en')
 			boton.style.display="inline";
 		});
 
-		}());*/
+		}());
