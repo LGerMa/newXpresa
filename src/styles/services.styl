@@ -96,8 +96,52 @@ body
 						flex-wrap wrap
 						position relative
 						width 100vw
-						margin-top 155px
-							
+						margin-top 160px
+						height 450px
+						//height 100vh
+						//background-color red
+						&-principal
+							position relative
+							width 100vw
+							//height 40vh
+							height 100px
+							.title
+								color $CelesteText
+								font-weight bold
+								font-size 25px
+								margin 1rem 0
+								text-transform uppercase
+							.desc
+								line-height 1.6em
+								padding 0.5rem
+								color black
+						&-figuras
+							position relative
+							width 100vw
+							//height 60vh
+							height 350px
+							&-linea
+								background-color $Celeste
+								height 100%
+								width 5px
+								position absolute
+								top 250px
+								left 50vw
+							&-item
+								display flex
+								flex-direction column
+								flex-wrap wrap
+								position relative
+								//height 20vh
+								//margin-top 5vh
+								&-circulo
+									background-color $Celeste
+									//height  17vh
+									//width 30vw
+									position absolute
+									left 35vw
+									//border solid 1px $Celeste
+									border-radius 50%						
 
 @media (min-width:768px)
 	body
