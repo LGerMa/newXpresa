@@ -97,14 +97,14 @@ body
 						position relative
 						width 100vw
 						margin-top 160px
-						height 450px
+						height 650px
 						//height 100vh
 						//background-color red
 						&-principal
 							position relative
 							width 100vw
 							//height 40vh
-							height 100px
+							height 10%
 							.title
 								color $CelesteText
 								font-weight bold
@@ -119,29 +119,48 @@ body
 							position relative
 							width 100vw
 							//height 60vh
-							height 350px
+							height 90%
 							&-linea
 								background-color $Celeste
 								height 100%
 								width 5px
 								position absolute
-								top 250px
+								top 150px
 								left 50vw
-							&-item
-								display flex
-								flex-direction column
-								flex-wrap wrap
+							&-items
 								position relative
-								//height 20vh
-								//margin-top 5vh
-								&-circulo
-									background-color $Celeste
-									//height  17vh
-									//width 30vw
-									position absolute
-									left 35vw
-									//border solid 1px $Celeste
-									border-radius 50%						
+								//background-color red
+								width 100vw
+								margin-top 160px
+								&-item
+									display flex
+									flex-direction column
+									flex-wrap wrap
+									position relative
+									height 100px
+									margin-top 50px
+									//background-color red
+									&-circulo
+										background-color $Celeste
+										height 100px
+										width 100px
+										position absolute
+										left 37vw
+										//top 160px
+										//border solid 1px $Celeste
+										border-radius 50%
+										img
+											padding-top 35px
+									&-desc
+										background-color white
+										width 100vw
+										height 30px
+										position relative
+										margin-top 105px
+										.title
+											color black
+											line-height 1.6em
+											padding 0.5rem						
 
 @media (min-width:768px)
 	body
