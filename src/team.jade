@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no", initial-scale="1")
+		link(rel="stylesheet", type="text/css", href="./css/team.css")
+		title Lanza tus mejores ideas!
+	body
+		div(class="global")
+			header(class="header")
+				div(class="header-txt")
+					img(class="header-txt-button", id="botoncito",src="./img/menuicon.png")
+					img(class="header-txt-logo" src="./img/logo.png")
+					div(class="header-txt-titulos")
+						h1 EQUIPO
+						h4 Bienvenido 
+							span &#62; Equipo
+				nav
+					include ./menu.jade
+			article(id="contenedor", class="content")
+				div(class="content-text-efecto")
+					div(class="content-text-efecto-encima")
+						p(class="titulo") Conoce a nuestro equipo
+						p(class="text")  Como XPRESA WEB te damos todas las armas que necesitas para que tu negocio no tenga nada que envidiar a las grandes marcas y se haga de su lugar en el mercado desde un sitio web con clase y funcionabilidad, hasta llevar su marca a las redes sociales por medio de una estrategia
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js")
+
+	script.
+		
+		(function(){
+		var boton = document.getElementById('botoncito');
+		var menu = document.getElementById('mimenu');
+		var close = document.getElementById('close');
+		var hammerPanel = new Hammer(document.querySelector("#contenedor"));
+		var hammerSide = new Hammer(menu);
+
+		
+		hammerPanel.on('swiperight', function(){
+		menu.classList.toggle('active');
+		document.querySelector("#contenedor").classList.toggle('active');
+		boton.style.display="none";
+		});
+
+		hammerSide.on('swipeleft', function(){		
+		document.querySelector("#contenedor").classList.toggle('active');
+		menu.classList.toggle('active');
+		boton.style.display="inline";
+		});
+
+		boton.addEventListener('click', function(){
+			menu.classList.toggle('active');
+			document.querySelector("#contenedor").classList.toggle('active');
+			boton.style.display="none";
+		});
+
+		close.addEventListener('click', function(){
+			menu.classList.toggle('active');
+			document.querySelector("#contenedor").classList.toggle('active');
+			boton.style.display="inline";
+		});
+		
+		}());
+					
+
