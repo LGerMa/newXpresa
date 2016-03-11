@@ -65,4 +65,35 @@ body
 						.texto
 							line-height 1.6em
 							padding 1rem
-							//color black
+							color black
+					&-team
+						display flex
+						flex-direction row
+						flex-wrap wrap
+						width 70vw
+						margin 0vh 15vw
+						&-item
+							height auto
+							width 70vw
+							margin-top 1px
+							img
+								width 50vw
+							&-info
+								display none
+								
+@media (min-width:768px)
+	body
+		.global
+			@import 'header_desktop.styl'
+			.header
+				background-image url('../img/team/Desktop/banner_team.jpg')
+			.content
+				position relative
+				width 100vw
+				transition all .9s ease-in
+				&.active
+					filter: blur(20px);
+					-webkit-filter: blur(20px);
+					-moz-filter: blur(20px);
+					-o-filter: blur(20px);
+					-ms-filter: blur(20px);
