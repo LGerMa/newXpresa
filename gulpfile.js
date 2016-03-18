@@ -12,7 +12,7 @@ var config = {
 		output: './build/css'
 	},
 	html: {
-		watch: './src/*.jade',
+		watch: './src/**/*.jade',
 		output: './build'
 	}
 }

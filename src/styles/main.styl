@@ -28,8 +28,7 @@ body
 	color white
 
 	.global
-		@import 'header.styl'
-		/*.header	
+		.header	
 			position fixed
 			z-index 10
 			top 0
@@ -80,7 +79,7 @@ body
 						&-link
 							color $VerdeText
 							text-decoration none !important
-							display block*/
+							display block
 		.content
 			position relative
 			width 100vw
@@ -164,41 +163,23 @@ body
 	body
 		.global
 			.header
+				position fixed
 				width 100vw
 				height 100px
-				background white
+				background transparent
 				display flex
 				flex-wrap wrap
 				flex-direction row
-				justify-content space-between
-				background-image url('../img/header.png')
-				background-size cover
+				justify-content flex-end
 				&-txt
-					display flex
+					display none
 					flex-direction row
 					&-button
 						display none
 					&-titulos
-						font-family 'Titulos'
-						display flex
-						flex-direction column
-						h1
-							color $CelesteText
-							margin 20px 15px 10px 15px
-						h4
-							color $GrisText
-							margin-left 15px
-							span
-								color $VerdeText
-							
+						display none
 					&-logo
-						display inline
-						margin-left 20px
-						margin-top 20px
-						width 90px
-						height 60px
-						padding 0 15px 0 0
-						border-right solid 2px $GrisText
+						display none
 				.Menu-lista
 					background transparent
 					position static

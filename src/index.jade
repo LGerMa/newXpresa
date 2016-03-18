@@ -17,7 +17,19 @@ html(lang='en')
 						h4 Bienvenido 
 							span &#62; Home
 				nav
-					include ./menu.jade
+					ul(id="mimenu",class="Menu-lista")
+						img(src="./img/close.png", class="cerrar", id="close")
+						div(class="flex-menu")
+							div
+								img(src="./img/logowhite.png")
+							li(class="flex-menu-item")
+								a(href="index.html", class="flex-menu-item-link") Home
+							li(class="flex-menu-item")
+								a(href="./pag/services.html", class="flex-menu-item-link") Servicios
+							li(class="flex-menu-item")
+								a(href="./pag/team.html", class="flex-menu-item-link") Equipo
+							li(class="flex-menu-item")
+								a(href="#", class="flex-menu-item-link") Contacto
 			article(id="contenedor",class="content")
 				section(class="content-slide")
 					picture
@@ -32,10 +44,10 @@ html(lang='en')
 
 						p(class="texto") La informática y el Diseño Gráfico, hoy en día nos ayuda a impulsar a pequeñas y grandes empresas llevándolos a escalar dentro del mercado gracias a nuevas herramientas digitales con altos estándares de calidad acompañado de nuestro equipo especializado.
 						picture
-							source(media="(min-width: 1024px)", srcset="./img/banner_service-desktop.jpg")
+							source(media="(min-width: 1024px)", srcset="./img/banner-service-desktop.jpg")
 							source(media="(min-width: 768px)", srcset="./img/banner-service-mobileretina.jpg 2x")
-							source(media="(min-width: 320px)", srcset="./img/banner_service-mobile.jpg")
-							img(src="./img/banner_service-mobile.jpg")
+							source(media="(min-width: 320px)", srcset="./img/banner-service-mobile.jpg")
+							img(src="./img/banner-service-mobile.jpg")
 						div(class="encima-footer")
 							h2(class="encima-footer-titulo") ¿De qué manera podemos ayudarte?
 							p(class="encima-footer-parrafo") Conoce nuestros principales servicios
