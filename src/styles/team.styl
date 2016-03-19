@@ -126,6 +126,7 @@ body
 					flex-direction row
 					flex-wrap wrap
 					&-encima
+						position relative
 						width 70vw
 						margin 0vh 15vw
 						.titulo
@@ -139,6 +140,7 @@ body
 							padding 1rem
 							color black
 					&-team
+						position relative
 						display flex
 						flex-direction row
 						flex-wrap wrap
@@ -147,18 +149,74 @@ body
 						&-item
 							height auto
 							width 35vw
-							margin-top 1px
-							img
+							//margin-top 1px
+							position relative
+							-webkit-perspective 800px
+							-moz-perspective 800px
+							-o-perspective 800px
+							perspective 800px
+							img 
 								width 35vw
-							&-info
-								display none
+							&-card
+								position relative
+								-webkit-transition: -webkit-transform 1s;
+								-moz-transition: -moz-transform 1s;
+								-o-transition: -o-transform 1s;
+								transition: transform 1s;
+								-webkit-transform-style: preserve-3d;
+								-moz-transform-style: preserve-3d;
+								-o-transform-style: preserve-3d;
+								transform-style: preserve-3d;
+								&.flip
+									-webkit-transform: rotateY( 180deg );
+									-moz-transform: rotateY( 180deg );
+									-o-transform: rotateY( 180deg);
+									transform: rotateY( 180deg);
+								.front
+									position absolute
+									background transparent
+									display block
+									margin 0
+									height 100%
+									width 100%
+									-webkit-backface-visibility: hidden;
+									-moz-backface-visibility: hidden;
+									-o-backface-visibility: hidden;
+									backface-visibility: hidden;
+									z-index 10
+								.back
+									position relative
+									height 100%
+									width 100%
+									display block
+									margin 0
+									-webkit-backface-visibility: hidden;
+									-moz-backface-visibility: hidden;
+									-o-backface-visibility: hidden;
+									backface-visibility: hidden;
+									z-index 1
+									-webkit-transform: rotateY(180deg);
+									-moz-transform: rotateY(180deg);
+									-o-transform: rotateY(180deg);
+									transform: rotateY(180deg);
+									&-info
+										position absolute
+										bottom 0px
+										left 0px
+										//background-color red
+										z-index 5
+										//display none
+							//img
+								//width 35vw
+							//&-info
+							//	display none
 		footer
 			text-align center
 			border-top solid 10px $CelesteText
 			width 100vw
 			position relative
-			left 0
-			bottom 0
+			//left 0
+			//bottom 0
 			height 150px	
 			background $Gris
 			display flex
