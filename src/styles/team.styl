@@ -13,6 +13,25 @@ $FooterText = #FFF
 /*DESKTOP, TABLETS Y CELULARES*/
 $Celeste = #04BAEE
 $Gris = #727272
+$Azul = #5B85AE
+/*Tamaños*/
+$Header_titulo_desktop = 72px
+$Header_subtitulo_desktop = 24px
+$Header_menu_desktop = 27px
+$Header_titulo_tablet = 38px
+$Header_subtitulo_tablet = 17px
+$Header_menu_tablet = 18px
+$Header_titulo_mobile = 27px
+$Header_subtitulo_mobile = 16px
+$Cuerpo_textos_desktop = 21px
+$Cuerpo_subtitulo_desktop = 23px
+$Cuerpo_textos_tablet = 17px
+$Cuerpo_subtitulo_tablet = 29px
+$Cuerpo_textos_mobile = 16px
+$Cuerpo_subtitulo_mobile = 18px
+$Footer_texto_desktop = 18px
+$Footer_texto_tablet = 16px
+$Footer_texto_mobile = 16px
 @font-face 
   font-family 'Titulos'
   src url('../fonts/Geomanist-Regular.otf') 
@@ -51,16 +70,18 @@ body
 					margin 11px 10px
 				&-titulos
 					font-family 'Titulos'
-					font-size 15px
+					//font-size 15px
 					display flex
 					flex-direction column
 					h1
 						color $CelesteText
-						font-size 28px
+						//font-size 28px
+						font-size $Header_titulo_mobile
 						margin 8px 15px 3px 15px
 					h4
 						color $GrisText
 						margin-left 15px
+						font-size $Header_subtitulo_mobile
 						span
 							color #ADCA1E
 						
@@ -128,7 +149,7 @@ body
 					&-encima
 						position relative
 						width 70vw
-						margin 0vh 15vw
+						margin 0vh 15vw 2vh
 						.titulo
 							font-weight bold
 							font-size 30px
@@ -137,7 +158,7 @@ body
 							color $VerdeText
 						.texto
 							line-height 1.6em
-							padding 1rem
+							//padding 1rem
 							color black
 				&-team
 					position relative
@@ -145,9 +166,9 @@ body
 					flex-direction row
 					flex-wrap wrap
 					width 70vw
-					margin 0vh 15vw
+					margin 0vh 15vw 2vh
 					&-item
-						height auto
+						height 70vw
 						width 35vw
 						//margin-top 1px
 						position relative
@@ -155,25 +176,25 @@ body
 						-moz-perspective 800px
 						-o-perspective 800px
 						perspective 800px
-						img 
-							width 35vw
+						//img 
+							//width 35vw
 						&-card
 							position relative
-							-webkit-transition: -webkit-transform 1s;
-							-moz-transition: -moz-transform 1s;
-							-o-transition: -o-transform 1s;
-							transition: transform 1s;
-							-webkit-transform-style: preserve-3d;
-							-moz-transform-style: preserve-3d;
-							-o-transform-style: preserve-3d;
-							transform-style: preserve-3d;
+							-webkit-transition -webkit-transform 1s
+							-moz-transition -moz-transform 1s
+							-o-transition -o-transform 1s
+							transition transform 1s
+							-webkit-transform-style preserve-3d
+							-moz-transform-style preserve-3d
+							-o-transform-style preserve-3d
+							transform-style preserve-3d
 							width 100%
 							height 100%
 							&.flip
-								-webkit-transform: rotateY( 180deg );
-								-moz-transform: rotateY( 180deg );
-								-o-transform: rotateY( 180deg);
-								transform: rotateY( 180deg);
+								-webkit-transform rotateY( 180deg )
+								-moz-transform rotateY( 180deg )
+								-o-transform rotateY( 180deg)
+								transform rotateY( 180deg)
 							.front
 								position absolute
 								background transparent
@@ -181,24 +202,38 @@ body
 								margin 0
 								height 100%
 								width 100%
-								-webkit-backface-visibility: hidden;
-								-moz-backface-visibility: hidden;
-								-o-backface-visibility: hidden;
-								backface-visibility: hidden;
+								-webkit-backface-visibility hidden
+								-moz-backface-visibility hidden
+								-o-backface-visibility hidden
+								backface-visibility hidden
+								background-size cover
+							.team1
+								background-image url('../img/img1_mobile.jpg')
+							.team2
+								background-image url('../img/img2_mobile.jpg')
+							.team3
+								background-image url('../img/img3_mobile.jpg')
+							.team4
+								background-image url('../img/img4_mobile.jpg')
+							.team5
+								background-image url('../img/img5_mobile.jpg')
 							.back
-								position relative
+								position absolute
 								height 100%
 								width 100%
 								display block
 								margin 0
-								-webkit-backface-visibility: hidden;
-								-moz-backface-visibility: hidden;
-								-o-backface-visibility: hidden;
-								backface-visibility: hidden;
-								-webkit-transform: rotateY(180deg);
-								-moz-transform: rotateY(180deg);
-								-o-transform: rotateY(180deg);
-								transform: rotateY(180deg);
+								-webkit-backface-visibility hidden
+								-moz-backface-visibility hidden
+								-o-backface-visibility hidden
+								backface-visibility hidden
+								-webkit-transform rotateY(180deg)
+								-moz-transform rotateY(180deg)
+								-o-transform rotateY(180deg)
+								transform rotateY(180deg)
+								background-color $Azul
+								background-size cover
+								background-blend-mode multiply
 								&-info
 									position absolute
 									bottom 10px
@@ -215,12 +250,17 @@ body
 										width 25px
 										height 25px
 										margin-right 5px
-										//line-height 11vw
+										//line-height 1.5em
 										overflow hidden
 										text-align center
 										border-radius 50%
-										font-size 20px
-										color $CelesteText
+										//font-size 20px
+										//color $Azul
+										a
+											text-decoration none
+											font-size 20px
+											color $Azul
+											line-height 1.5em
 		footer
 			text-align center
 			border-top solid 10px $CelesteText
@@ -313,10 +353,25 @@ body
 					-moz-filter: blur(20px);
 					-o-filter: blur(20px);
 					-ms-filter: blur(20px);
+				&-text
+					&-team
+						&-item
+							&-card
+								.team1
+									background-image url('../img/img1_tablet.jpg')
+								.team2
+									background-image url('../img/img2_tablet.jpg')
+								.team3
+									background-image url('../img/img3_tablet.jpg')
+								.team4
+									background-image url('../img/img4_tablet.jpg')
+								.team5
+									background-image url('../img/img5_tablet.jpg')
 @media (min-width:1024px)
 	body
 		.global
 			.header
+				background-image url('../img/banner_team_desktop.jpg')
 			.content
 				&-text
 					&-efecto
@@ -347,12 +402,22 @@ body
 						width 90vw
 						margin 5vh 5vw
 						&-item
-							height auto
+							height 36vw
 							width 18vw
 							margin-top 1px
-							img
-								width 18vw
+							//img
+								//width 18vw
 							&-card
+								.team1
+									background-image url('../img/img1_desktop.jpg')
+								.team2
+									background-image url('../img/img2_desktop.jpg')
+								.team3
+									background-image url('../img/img3_desktop.jpg')
+								.team4
+									background-image url('../img/img4_desktop.jpg')
+								.team5
+									background-image url('../img/img5_desktop.jpg')
 								.back
 									&-info
 										h2
