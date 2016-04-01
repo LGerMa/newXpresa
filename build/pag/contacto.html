@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" initial-scale="1">
+    <link rel="stylesheet" type="text/css" href="../css/contacto.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <title>Lanza tus mejores ideas!</title>
+  </head>
+  <body>
+    <div class="global">
+      <header class="header">
+        <div class="header-txt"><img id="botoncito" src="../img/menuicon.png" class="header-txt-button"><img src="../img/logo.png" class="header-txt-logo">
+          <div class="header-txt-titulos">
+            <h1>CONTACTO</h1>
+            <h4>Home <span>&#62; Contacto	</span></h4>
+          </div>
+        </div>
+        <nav>
+          <ul id="mimenu" class="Menu-lista"><img src="../img/close.png" id="close" class="cerrar">
+            <div class="flex-menu">
+              <div><img src="../img/logowhite.png"></div>
+              <li class="flex-menu-item"><a href="../index.html" class="flex-menu-item-link">Home</a></li>
+              <li class="flex-menu-item"><a href="./services.html" class="flex-menu-item-link">Servicios</a></li>
+              <li class="flex-menu-item"><a href="./team.html" class="flex-menu-item-link">Equipo</a></li>
+              <li class="flex-menu-item"><a href="./contacto.html" class="flex-menu-item-link">Contacto</a></li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <article id="contenedor" class="content">
+        <section class="content-contactanos">
+          <div class="content-contactanos-texto">
+            <p class="titulo">¿Cómo podemos ayudarte?</p>
+            <p class="texto">Como XPRESA WEB te damos todas las armas que necesitas para que tu negocio no tenga nada que envidiar a las grandes marcas y se haga de su lugar en el mercado desde un sitio web con clase y funcionalidad, hasta llevar su marca a las redes sociales por medio de una estrategia.</p>
+          </div>
+        </section>
+        <section class="content-formulario">
+          <div class="content-formulario-form">
+            <form class="content-formulario-form-form">
+              <div class="losinput">
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="E-Mail">
+                <input type="text" placeholder="Asunto">
+              </div>
+              <div class="eltextarea">
+                <textarea type="textarea" placeholder="Mensaje"></textarea>
+              </div>
+              <div class="elboton">
+                <button type="button">Enviar</button>
+              </div>
+            </form>
+          </div>
+          <div class="content-formulario-redes"><span>E-mail</span>
+            <p>cuentanos@xpresaweb.com</p><span>Numero</span>
+            <p>7190-0165</p><span>Social Links</span>
+            <div><i class="fa fa-facebook"></i></div>
+            <div><i class="fa fa-twitter"></i></div>
+            <div><i class="fa fa-instagram"></i></div>
+          </div>
+        </section>
+        <footer>
+          <p>(+503 71900165)</p>
+          <p>cuentanos@xpresaweb.com</p>
+          <p>CopyRight XpresaWeb</p>
+          <p>All Right Reserver</p>
+        </footer>
+      </article>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js"></script>
+  <script>
+    (function(){
+    var boton = document.getElementById('botoncito');
+    var menu = document.getElementById('mimenu');
+    var close = document.getElementById('close');
+    var hammerPanel = new Hammer(document.querySelector("#contenedor"));
+    var hammerSide = new Hammer(menu);
+    var classname = document.getElementsByClassName("content-especialidad-cuadros-contentcard-card");
+    for (var i = 0; i < classname.length; i++) {
+    	classname[i].addEventListener('mouseover', function(){
+    	this.classList.add('active');
+    	}, false);
+    	}
+    
+    
+    hammerPanel.on('swiperight', function(){
+    menu.classList.toggle('active');
+    document.querySelector("#contenedor").classList.toggle('active');
+    });
+    
+    hammerSide.on('swipeleft', function(){		
+    document.querySelector("#contenedor").classList.toggle('active');
+    menu.classList.toggle('active');
+    });
+    
+    boton.addEventListener('click', function(){
+    	menu.classList.toggle('active');
+    	document.querySelector("#contenedor").classList.toggle('active');
+    });
+    
+    close.addEventListener('click', function(){
+    	menu.classList.toggle('active');
+    	document.querySelector("#contenedor").classList.toggle('active');
+    });
+    
+    }());
+  </script>
+</html>

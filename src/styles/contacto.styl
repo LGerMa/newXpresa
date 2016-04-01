@@ -1,0 +1,387 @@
+@import ('./normalize.css')
+@import ('./reset')
+
+
+/*TEXTOS 0080FF el azul q me agrada :3 aqua*/
+$CelesteText = #04BAEE
+$VerdeText = #ADCA1E
+$AquaText = #0080FF
+$GrisText = #9C9B9B
+$PlaceholderText = #EDEDED
+$FooterText = #FFF
+
+/*DESKTOP, TABLETS Y CELULARES*/
+$Celeste = #04BAEE
+$Gris = #727272
+@font-face 
+  font-family 'Titulos'
+  src url('../fonts/Geomanist-Regular.otf') 
+@font-face
+	font-family 'Titulos-Textos'
+	src url('../fonts/Junction-bold.otf')
+@font-face
+	font-family 'Textos'
+	src url('../fonts/Junction-light.otf')
+
+body
+	font-family 'Titulos'
+	font-size 16px
+	margin 0 auto
+	color white
+	.global
+		.header
+			position fixed
+			z-index 10
+			top 0
+			left 0
+			width 100vw
+			height 60px
+			background white 
+			display flex
+			flex-wrap wrap
+			flex-direction row
+			justify-content space-between
+			background-image url('../img/header-mobile-contacto.png')
+			background-size cover
+			&-txt
+				display flex
+				flex-direction row
+				&-button
+					width 30px
+					height 30px
+					margin 11px 10px
+				&-titulos
+					font-family 'Titulos'
+					font-size 15px
+					display flex
+					flex-direction column
+					h1
+						color $CelesteText
+						font-size 28px
+						margin 8px 15px 3px 15px
+					h4
+						color $GrisText
+						margin-left 15px
+						span
+							color #ADCA1E
+				&-logo
+					display none
+			.Menu-lista
+				z-index 2
+				width 100vw
+				height 100vh
+				position absolute
+				top 0
+				left -100vw
+				background-color black
+				opacity .8
+				transition left 0.3s ease-in
+				text-align center
+				display flex
+				flex-direction column
+				&.active
+					left 0
+				.cerrar
+					align-self flex-end
+					margin 3vh 20vw 0vh 0vw
+				.flex-menu
+					list-style none
+					img
+						margin 3vh 0vw 0vh 0vw
+						width 50%
+					&-item
+						font-family 'Titulos'
+						margin 0 20vw
+						font-size 20px
+						text-align center
+						height 80px
+						line-height 80px
+						border-bottom: solid 1px white
+						&-link
+							color $VerdeText
+							text-decoration none !important
+							display block
+		.content
+			margin-top 60px
+			position relative
+			width 100vw
+			transition all .9s ease-in
+			&.active
+				filter: blur(20px); 
+				-webkit-filter: blur(20px); 
+				-moz-filter: blur(20px);
+				-o-filter: blur(20px);
+				-ms-filter: blur(20px);
+			&-contactanos
+				text-align center
+				&-texto
+					.titulo
+						font-size 40px
+						padding 10vw 0vw 3vw 0vw
+						text-transform uppercase
+						color $AquaText
+					.texto
+						font-size 11px
+						line-height 1.6em
+						padding 0vw 10vw
+						color $GrisText
+						margin-bottom 10vw
+			&-formulario
+				background #DCDCDC
+				text-align center
+				display flex
+				flex-direction column
+				&-form
+					order 2
+					&-form
+						display flex
+						flex-direction column
+						input
+							text-align center
+							width 80vw
+							border-radius 5px
+							height 50px
+							margin-top 10px
+							color $GrisText
+						textarea
+							text-align center
+							padding 1vw
+							width 80vw
+							height 150px
+							border-radius 5px
+							margin-top 10px
+							color $GrisText
+						button
+							font-family 'Titulos'
+							font-weight bold
+							font-size 20px
+							margin 10px auto
+							background-color $VerdeText
+							color white
+							border-radius 5px
+							width 30vw
+							height 10vw
+				&-redes
+					order 1
+					text-align left
+					width 100vw
+					height 50vw
+					background #f8f5f1
+					text-align center
+					span
+						font-family 'Titulos'
+						display block
+						color $GrisText
+						font-weight bold
+						padding 2.5vw
+					div
+						background $VerdeText
+						display inline-block
+						width 10vw
+						height 10vw
+						line-height 11vw
+						overflow hidden
+						text-align center
+						border-radius 100px
+						font-size 25px
+						color white
+					p
+						font-family 'Textos'
+						color $GrisText
+			footer
+				text-align center
+				border-top solid 10px $CelesteText
+				width 100vw
+				position relative
+				left 0
+				bottom 0
+				height 150px	
+				background $Gris
+				display flex
+				flex-direction column
+				flex-wrap wrap
+				justify-content space-around
+@media (min-width:768px)
+	body
+		.global
+			.header
+				width 100vw
+				height 100px
+				background white
+				display flex
+				flex-wrap wrap
+				flex-direction row
+				justify-content space-between
+				background-image url('../img/header-tablet-contacto.png')
+				background-size cover
+				&-txt
+					display flex
+					flex-direction row
+					&-button
+						display none
+					&-titulos
+						font-family 'Titulos'
+						display flex
+						flex-direction column
+						h1
+							color $CelesteText
+							margin 20px 15px 10px 15px
+						h4
+							color $GrisText
+							margin-left 15px
+							span
+								color $VerdeText
+							
+					&-logo
+						display inline
+						margin-left 20px
+						margin-top 20px
+						width 90px
+						height 60px
+						padding 0 15px 0 0
+						border-right solid 2px $GrisText
+				.Menu-lista
+					background transparent
+					position static
+					width auto
+					height auto
+					opacity 1
+					.cerrar
+						display none
+					.flex-menu
+						img
+							display none
+						&-item
+							display inline-block
+							font-family 'Titulos'
+							margin 0
+							padding 0vw 3vw
+							margin 25px 0vh
+							font-size 16px
+							height 30px
+							line-height 30px
+							border-bottom 0px
+							border-right solid 1px $VerdeText
+						&-item:nth-child(5)
+							border-right 0px
+							&-link
+								color $VerdeText
+								text-decoration none !important
+								display block
+			.content
+				position relative
+				width 100vw
+				transition all .9s ease-in
+				&-contactanos
+					display flex
+					flex-direction row
+					justify-content space-between
+					&-texto
+						width 100vw
+						.titulo
+							font-size 40px
+							text-transform uppercase
+							color $AquaText
+						.texto
+							font-size 16px
+							line-height 1.6em
+							padding 0vw 10vw
+							color $GrisText
+							margin-bottom 30px
+				&-formulario
+					background #DCDCDC
+					text-align center
+					display flex
+					flex-direction row
+					&-form
+						order 1
+						height 32vw
+						&-form
+							display flex
+							flex-direction row
+							flex-wrap wrap
+							.losinput
+								width 30vw
+								input
+									text-align center
+									width 25vw
+									border-radius 5px
+									height 5vw
+									margin-top 2vw
+									margin-left 5vw
+									color $GrisText
+							.eltextarea
+								width 30vw
+								textarea
+									text-align center
+									padding 1vw
+									width 23vw
+									height 18vw
+									border-radius 5px
+									margin-top 2vw
+									margin-left 5vw
+									color $GrisText
+							.elboton
+								width 100%
+								text-align left
+								button
+									margin-left 5vw
+									margin-top 3vw
+									font-family 'Titulos'
+									font-weight bold
+									text-transform uppercase
+									border none
+									font-size 20px
+									align-self flex-start
+									background-color $VerdeText
+									color white
+									border-radius 5px
+									width 12vw
+									height 4vw
+					&-redes
+						order 2
+						text-align left
+						width 40vw
+						height 32vw
+						background #f8f5f1
+						span
+							font-family 'Titulos'
+							display block
+							color $GrisText
+							font-weight bold
+							padding 2.5vw
+						div
+							background $VerdeText
+							display inline-block
+							width 5vw
+							height 5vw
+							line-height 5.2vw
+							overflow hidden
+							text-align center
+							margin-left 2.5vw
+							border-radius 100px
+							font-size 25px
+							color white
+						p
+							font-family 'Textos'
+							color $GrisText
+							margin-left 2.5vw
+				footer
+					text-align center
+					border-top solid 10px $CelesteText
+					width 100vw
+					position relative
+					left 0
+					bottom 0
+					height 150px	
+					background $Gris
+					display flex
+					flex-direction column
+					flex-wrap wrap
+					justify-content space-around
+@media (min-width:1024px)
+	body
+		.global
+			.header
+				background-image url('../img/header-desktop-contacto.png')
+				background-size cover
