@@ -1,0 +1,574 @@
+@import ('./normalize.css')
+@import ('./reset')
+
+
+/*TEXTOS*/
+$CelesteText = #04BAEE
+$VerdeText = #C0D356
+$AquaText = #0080FF
+$GrisText = #9C9B9B
+$PlaceholderText = #EDEDED
+$FooterText = #FFF
+
+/*DESKTOP, TABLETS Y CELULARES*/
+$Celeste = #04BAEE
+$Gris = #727272
+$Azul = #5B85AE
+/*Tamaños*/
+$Header_titulo_desktop = 72px
+$Header_subtitulo_desktop = 24px
+$Header_menu_desktop = 27px
+$Header_titulo_tablet = 38px
+$Header_subtitulo_tablet = 17px
+$Header_menu_tablet = 18px
+$Header_titulo_mobile = 27px
+$Header_subtitulo_mobile = 16px
+$Cuerpo_textos_desktop = 21px
+$Cuerpo_subtitulo_desktop = 35px
+$Cuerpo_textos_tablet = 17px
+$Cuerpo_subtitulo_tablet = 29px
+$Cuerpo_textos_mobile = 16px
+$Cuerpo_subtitulo_mobile = 30px
+$Footer_texto_desktop = 18px
+$Footer_texto_tablet = 16px
+$Footer_texto_mobile = 16px
+@font-face 
+  font-family 'Titulos'
+  src url('../fonts/Geomanist-Regular.otf') 
+@font-face
+	font-family 'Titulos-Textos'
+	src url('../fonts/Junction-bold.otf')
+@font-face
+	font-family 'Textos'
+	src url('../fonts/Junction-light.otf')
+body
+	font-family 'Titulos'
+	font-size 16px
+	margin 0 auto
+	color white
+	.global
+		.header
+			position fixed
+			z-index 10
+			top 0
+			left 0
+			width 100vw
+			height 60px
+			background white 
+			display flex
+			flex-wrap wrap
+			flex-direction row
+			justify-content space-between
+			background-image url('../img/banner_team_mobile.jpg')
+			background-size cover
+			&-txt
+				display flex
+				flex-direction row
+				&-button
+					width 30px
+					height 30px
+					margin 11px 10px
+				&-titulos
+					font-family 'Titulos'
+					//font-size 15px
+					display flex
+					flex-direction column
+					h1
+						color $CelesteText
+						//font-size 28px
+						font-size $Header_titulo_mobile
+						margin 8px 15px 3px 15px
+					h4
+						color $GrisText
+						margin-left 15px
+						font-size $Header_subtitulo_mobile
+						span
+							color #ADCA1E
+						
+				&-logo
+					display none
+			.Menu-lista
+				z-index 2
+				width 100vw
+				height 100vh
+				position absolute
+				top 0
+				left -100vw
+				background-color black
+				opacity .8
+				transition left 0.3s ease-in
+				text-align center
+				display flex
+				flex-direction column
+				
+				&.active
+					left 0
+				.cerrar
+					align-self flex-end
+					margin 3vh 20vw 0vh 0vw
+				.flex-menu
+					list-style none
+					img
+						margin 3vh 0vw 0vh 0vw
+						width 50%
+					&-item
+						font-family 'Titulos'
+						margin 0 20vw
+						font-size 20px
+						text-align center
+						height 80px
+						line-height 80px
+						border-bottom: solid 1px white
+						&-link
+							color $VerdeText
+							text-decoration none !important
+							display block
+		.content
+			position relative
+			//top 60px
+			margin-top 60px
+			width 100vw
+			height 100vh
+			transition all .9s ease-in
+			&.active
+				filter: blur(20px); 
+				-webkit-filter: blur(20px); 
+				-moz-filter: blur(20px);
+				-o-filter: blur(20px);
+				-ms-filter: blur(20px);
+			&-text
+				&-efecto
+					//position absolute
+					//top 0px
+					position relative
+					width 100vw
+					text-align center
+					display flex
+					flex-direction row
+					flex-wrap wrap
+					&-encima
+						position relative
+						width 70vw
+						margin 0vh 15vw 2vh
+						.titulo
+							font-family 'Titulos'
+							font-weight bold
+							//font-size 30px
+							font-size $Cuerpo_subtitulo_mobile
+							margin 1rem 0
+							text-transform uppercase
+							color $VerdeText
+						.texto
+							line-height 1.6em
+							//padding 1rem
+							font-size $Cuerpo_textos_mobile
+							color $GrisText
+							font-family 'Textos'
+				&-team
+					position relative
+					display flex
+					flex-direction row
+					flex-wrap wrap
+					width 70vw
+					margin 0vh 15vw 2vh
+					&-item
+						height 70vw
+						width 35vw
+						//margin-top 1px
+						position relative
+						-webkit-perspective 800px
+						-moz-perspective 800px
+						-o-perspective 800px
+						perspective 800px
+						//img 
+							//width 35vw
+						&-card
+							position relative
+							-webkit-transition -webkit-transform 1s
+							-moz-transition -moz-transform 1s
+							-o-transition -o-transform 1s
+							transition transform 1s
+							-webkit-transform-style preserve-3d
+							-moz-transform-style preserve-3d
+							-o-transform-style preserve-3d
+							transform-style preserve-3d
+							width 100%
+							height 100%
+							&.flip
+								-webkit-transform rotateY( 180deg )
+								-moz-transform rotateY( 180deg )
+								-o-transform rotateY( 180deg)
+								transform rotateY( 180deg)
+							.front
+								position absolute
+								background transparent
+								display block
+								margin 0
+								height 100%
+								width 100%
+								-webkit-backface-visibility hidden
+								-moz-backface-visibility hidden
+								-o-backface-visibility hidden
+								backface-visibility hidden
+								background-size cover
+							.team1
+								background-image url('../img/img1_mobile.jpg')
+							.team2
+								background-image url('../img/img2_mobile.jpg')
+							.team3
+								background-image url('../img/img3_mobile.jpg')
+							.team4
+								background-image url('../img/img4_mobile.jpg')
+							.team5
+								background-image url('../img/img5_mobile.jpg')
+							.back
+								position absolute
+								height 100%
+								width 100%
+								display block
+								margin 0
+								-webkit-backface-visibility hidden
+								-moz-backface-visibility hidden
+								-o-backface-visibility hidden
+								backface-visibility hidden
+								-webkit-transform rotateY(180deg)
+								-moz-transform rotateY(180deg)
+								-o-transform rotateY(180deg)
+								transform rotateY(180deg)
+								background-color $Azul
+								background-size cover
+								background-blend-mode multiply
+								&-info
+									position absolute
+									bottom 2px
+									left 8px
+									h2
+										font-size 15px
+										text-transform uppercase
+										font-family 'Titulos'	
+									h5
+										display none
+									.socialMedia
+										display none
+										/*background white
+										display inline-block
+										width 25px
+										height 25px
+										margin-right 5px
+										//line-height 1.5em
+										overflow hidden
+										text-align center
+										border-radius 50%
+										//font-size 20px
+										//color $Azul
+										a
+											text-decoration none
+											//font-size 20px
+											font-size 1.25rem
+											color $Azul
+											line-height 1.7em*/
+		footer
+			text-align center
+			border-top solid 10px $CelesteText
+			width 100vw
+			position relative
+			//left 0
+			//bottom 0
+			height 150px	
+			background $Gris
+			display flex
+			flex-direction column
+			flex-wrap wrap
+			justify-content space-around								
+@media (min-width:768px)
+	body
+		.global
+			.header
+				width 100vw
+				height 100px
+				background white
+				display flex
+				flex-wrap wrap
+				flex-direction row
+				justify-content space-between
+				background-image url('../img/banner_team_tablet.jpg')
+				background-size cover
+				&-txt
+					display flex
+					flex-direction row
+					&-button
+						display none
+					&-titulos
+						font-family 'Titulos'
+						display flex
+						flex-direction column
+						h1
+							color $CelesteText
+							margin 20px 15px 10px 15px
+						h4
+							color $GrisText
+							margin-left 15px
+							span
+								color $VerdeText
+							
+					&-logo
+						display inline
+						margin-left 20px
+						margin-top 20px
+						width 90px
+						height 60px
+						padding 0 15px 0 0
+						border-right solid 2px $GrisText
+				.Menu-lista
+					background transparent
+					position static
+					width auto
+					height auto
+					opacity 1
+					.cerrar
+						display none
+					.flex-menu
+						img
+							display none
+						&-item
+							display inline-block
+							font-family 'Titulos'
+							margin 0
+							padding 0vw 3vw
+							margin 25px 0vh
+							font-size 16px
+							height 30px
+							line-height 30px
+							border-bottom 0px
+							border-right solid 1px $VerdeText
+						&-item:nth-child(5)
+							border-right 0px
+							&-link
+								color $VerdeText
+								text-decoration none !important
+								display block
+			.content
+				position relative
+				margin-top 120px
+				width 100vw
+				height 100vh
+				transition all .9s ease-in
+				&.active
+					filter: blur(20px);
+					-webkit-filter: blur(20px);
+					-moz-filter: blur(20px);
+					-o-filter: blur(20px);
+					-ms-filter: blur(20px);
+				&-text
+					&-efecto
+						&-encima
+							.titulo
+								font-family 'Titulos'
+								font-size $Cuerpo_subtitulo_tablet
+							.texto
+								font-family 'Textos'
+								font-size $Cuerpo_textos_tablet
+					&-team
+						&-item
+							&-card
+								.team1
+									background-image url('../img/img1_tablet.jpg')
+								.team2
+									background-image url('../img/img2_tablet.jpg')
+								.team3
+									background-image url('../img/img3_tablet.jpg')
+								.team4
+									background-image url('../img/img4_tablet.jpg')
+								.team5
+									background-image url('../img/img5_tablet.jpg')
+								.back
+									&-info
+										h5
+											display block
+											font-size 12px
+											margin 2px 0px
+										.socialMedia
+											background white
+											display inline-block
+											margin-right 5px
+											//line-height 1.5em
+											overflow hidden
+											text-align center
+											border-radius 50%
+											height 27px
+											width 27px
+											a
+												text-decoration none
+												color $Azul
+												font-size 1.5rem
+												line-height 1.5em
+										
+@media (min-width:1024px)
+	body
+		.global
+			.header
+				background-image url('../img/banner_team_desktop.jpg')
+			.content
+				&-text
+					&-efecto
+						position relative
+						width 100vw
+						text-align center
+						display flex
+						flex-direction row
+						flex-wrap wrap
+						&-encima
+							width 90vw
+							margin 0vh 10vw
+							.titulo
+								font-weight bold
+								//font-size 30px
+								margin 1rem 0
+								text-transform uppercase
+								color $VerdeText
+								font-family 'Titulos'
+								font-size $Cuerpo_subtitulo_desktop
+							.texto
+								line-height 1.6em
+								padding 1rem
+								color $GrisText
+								//font-size 23px
+								font-family 'Textos'
+								font-size $Cuerpo_textos_desktop
+					&-team
+						display flex
+						flex-direction row
+						flex-wrap wrap
+						width 90vw
+						margin 5vh 5vw
+						&-item
+							height 36vw
+							width 18vw
+							margin-top 1px
+							//img
+								//width 18vw
+							&-card
+								.team1
+									background-image url('../img/img1_desktop.jpg')
+								.team2
+									background-image url('../img/img2_desktop.jpg')
+								.team3
+									background-image url('../img/img3_desktop.jpg')
+								.team4
+									background-image url('../img/img4_desktop.jpg')
+								.team5
+									background-image url('../img/img5_desktop.jpg')
+								.back
+									&-info
+										h2
+											font-size 20px
+										h5
+											font-size 15px
+@media (min-width:2560px)
+	body
+		.global
+			.header
+				width 100vw
+				height 170px
+				background white
+				display flex
+				flex-wrap wrap
+				flex-direction row
+				justify-content space-between
+				background-image url('../img/banner_team_desktop.jpg')
+				background-size cover
+				&-txt
+					display flex
+					flex-direction row
+					&-button
+						display none
+					&-titulos
+						font-family 'Titulos'
+						display flex
+						flex-direction column
+						h1
+							font-size 40px
+							color $CelesteText
+							margin 40px 30px 20px 30px
+						h4
+							font-size 25px
+							color $GrisText
+							margin-left 30px
+							span
+								color $VerdeText
+							
+					&-logo
+						display inline
+						margin-left 20px
+						margin-top 20px
+						width 180px
+						height 120px
+						padding 0 15px 0 0
+						border-right solid 2px $GrisText
+				.Menu-lista
+						background transparent
+						position static
+						width auto
+						height auto
+						opacity 1
+						.cerrar
+							display none
+						.flex-menu
+							img
+								display none
+							&-item
+								display inline-block
+								font-family 'Titulos'
+								margin 0
+								padding 0vw 3vw
+								margin 25px 0vh
+								font-size 46px
+								height 120px
+								line-height 120px
+								border-bottom 0px
+								border-right solid 1px $VerdeText
+							&-item:nth-child(5)
+								border-right 0px
+								&-link
+									color $VerdeText
+									text-decoration none !important
+									display block
+			.content
+				&-text
+					&-efecto
+						position relative
+						width 100vw
+						text-align center
+						display flex
+						flex-direction row
+						flex-wrap wrap
+						&-encima
+							width 90vw
+							margin 0vh 10vw
+							.titulo
+								font-weight bold
+								font-size 80px
+								margin 1rem 0
+								text-transform uppercase
+								color $VerdeText
+								font-family 'Titulos'
+							.texto
+								line-height 1.6em
+								padding 1rem
+								color $GrisText
+								font-size 46px
+								font-family 'Textos'
+				footer
+					font-size 40px
+					text-align center
+					border-top solid 10px $CelesteText
+					width 100vw
+					position relative
+					left 0
+					bottom 0
+					height 350px	
+					background $Gris
+					display flex
+					flex-direction column
+					flex-wrap wrap
+					justify-content space-around

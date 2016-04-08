@@ -1,0 +1,1044 @@
+@import ('./normalize.css')
+@import ('./reset')
+
+
+/*TEXTOS 0080FF el azul q me agrada :3 aqua*/
+$CelesteText = #04BAEE
+$VerdeText = #ADCA1E
+$AquaText = #0080FF
+$GrisText = #9C9B9B
+$PlaceholderText = #EDEDED
+$FooterText = #FFF
+
+/*DESKTOP, TABLETS Y CELULARES*/
+$Celeste = #04BAEE
+$Gris = #727272
+
+/*Tamaños*/
+$Header_titulo_desktop = 72px
+$Header_subtitulo_desktop = 24px
+$Header_menu_desktop = 27px
+$Header_titulo_tablet = 38px
+$Header_subtitulo_tablet = 17px
+$Header_menu_tablet = 18px
+$Header_titulo_mobile = 27px
+$Header_subtitulo_mobile = 16px
+$Cuerpo_textos_desktop = 21px
+$Cuerpo_subtitulo_desktop = 35px
+$Cuerpo_textos_tablet = 17px
+$Cuerpo_subtitulo_tablet = 29px
+$Cuerpo_textos_mobile = 16px
+$Cuerpo_subtitulo_mobile = 30px
+$Footer_texto_desktop = 18px
+$Footer_texto_tablet = 16px
+$Footer_texto_mobile = 16px
+@font-face 
+  font-family 'Titulos'
+  src url('../fonts/Geomanist-Regular.otf') 
+@font-face
+	font-family 'Titulos-Textos'
+	src url('../fonts/Junction-bold.otf')
+@font-face
+	font-family 'Textos'
+	src url('../fonts/Junction-light.otf')
+
+body
+	font-family 'Titulos'
+	font-size 16px
+	margin 0 auto
+	color white
+	.global
+		.header
+			position fixed
+			z-index 10
+			top 0
+			left 0
+			width 100vw
+			height 60px
+			background white 
+			display flex
+			flex-wrap wrap
+			flex-direction row
+			justify-content space-between
+			background-image url('../img/header-service.jpg')
+			background-size cover
+			&-txt
+				display flex
+				flex-direction row
+				&-button
+					width 30px
+					height 30px
+					margin 11px 10px
+				&-titulos
+					font-family 'Titulos'
+					font-size 15px
+					display flex
+					flex-direction column
+					h1
+						color $CelesteText
+						font-size 28px
+						margin 8px 15px 3px 15px
+					h4
+						color $GrisText
+						margin-left 15px
+						span
+							color #ADCA1E
+						
+				&-logo
+					display none
+			.Menu-lista
+				z-index 2
+				width 100vw
+				height 100vh
+				position absolute
+				top 0
+				left -100vw
+				background-color black
+				opacity .8
+				transition left 0.3s ease-in
+				text-align center
+				display flex
+				flex-direction column
+				
+				&.active
+					left 0
+				.cerrar
+					align-self flex-end
+					margin 3vh 20vw 0vh 0vw
+				.flex-menu
+					list-style none
+					img
+						margin 3vh 0vw 0vh 0vw
+						width 50%
+					&-item
+						font-family 'Titulos'
+						margin 0 20vw
+						font-size 20px
+						text-align center
+						height 80px
+						line-height 80px
+						border-bottom: solid 1px white
+						&-link
+							color $VerdeText
+							text-decoration none !important
+							display block
+		.content
+			margin-top 60px
+			position relative
+			width 100vw
+			transition all .9s ease-in
+			&.active
+				filter: blur(20px); 
+				-webkit-filter: blur(20px); 
+				-moz-filter: blur(20px);
+				-o-filter: blur(20px);
+				-ms-filter: blur(20px);
+			&-especialidad
+				text-align center
+				&-texto
+					.titulo
+						//font-size 40px
+						padding 10vw 0vw 3vw 0vw
+						text-transform uppercase
+						color $AquaText
+						font-family 'Titulos'
+						font-size $Cuerpo_subtitulo_mobile
+					.texto
+						//font-size 11px
+						line-height 1.6em
+						padding 0vw 10vw
+						color $GrisText
+						margin-bottom 10vw
+						font-family 'Textos'
+						font-size $Cuerpo_textos_mobile
+				&-cuadros
+					display flex
+					flex-direction row
+					justify-content center
+					flex-wrap wrap
+					&-contentcard
+						width 43vw
+						height 43vw
+						position relative
+						margin 0 0
+						-webkit-perspective 800px
+						-moz-perspective 800px
+						-o-perspective 800px
+						perspective 800px
+						&-card
+							width 100%
+							height 100%
+							position absolute
+							-webkit-transition: -webkit-transform 1s;
+							-moz-transition: -moz-transform 1s;
+							-o-transition: -o-transform 1s;
+							transition: transform 1s;
+							-webkit-transform-style: preserve-3d;
+							-moz-transform-style: preserve-3d;
+							-o-transform-style: preserve-3d;
+							transform-style: preserve-3d;
+							color $GrisText
+							&.active
+								-webkit-transform: rotateY( 180deg );
+								-moz-transform: rotateY( 180deg );
+								-o-transform: rotateY( 180deg);
+								transform: rotateY( 180deg);
+							.front
+								background transparent
+								margin 0
+								display block
+								height 100%
+								width 100%
+								position absolute
+								-webkit-backface-visibility: hidden;
+								-moz-backface-visibility: hidden;
+								-o-backface-visibility: hidden;
+								backface-visibility: hidden;
+								i
+									color $AquaText
+									font-size 40px
+									margin 5vw 0%
+								p
+									margin 1vw 0%
+								h6
+									margin 1vw .5vw
+							.back
+								display block
+								height 100%
+								width 100%
+								position absolute
+								-webkit-backface-visibility: hidden;
+								-moz-backface-visibility: hidden;
+								-o-backface-visibility: hidden;
+								backface-visibility: hidden;
+								margin 0
+								border dashed 1px $AquaText
+								background transparent
+								background-color white
+								-webkit-transform: rotateY(180deg);
+								-moz-transform: rotateY(180deg);
+								-o-transform: rotateY(180deg);
+								transform: rotateY(180deg);
+								i
+									color $CelesteText
+									font-size 40px
+									margin 5vw 0%
+								p
+									margin 1vw 0%
+								h6
+									margin 1vw .5vw
+			&-aptitudes
+				text-align center
+				margin-top 40px
+				&-texto
+					.titulo
+						//font-size 40px
+						padding 10vw 0vw 3vw 0vw
+						text-transform uppercase
+						color $AquaText
+						font-family 'Titulos'
+						font-size $Cuerpo_subtitulo_mobile
+					.texto
+						//font-size 11px
+						line-height 1.6em
+						padding 0vw 10vw
+						color $GrisText
+						margin-bottom 5vw
+						font-family 'Textos'
+						font-size $Cuerpo_textos_mobile
+				&-line
+					position relative
+					.linea
+						z-index -5
+						position absolute
+						left 49.8vw
+						width 0px
+						border solid 2px $CelesteText
+						min-height 450px
+						max-height 700px
+						height 80vw
+					.pack
+						z-index 10
+						width 40vw
+						color $GrisText
+						margin 0px 0px 0vw 30.5vw
+						.feature
+							margin 0 auto
+							background $CelesteText
+							width 18vw
+							height 18vw
+							line-height 20vw
+							font-size 45px
+							border-radius 100%
+							color white
+						.titulo
+							padding 5px
+							background white
+			&-autoevaluacion
+				text-align center
+				&-texto
+					.titulo
+						//font-size 40px
+						padding 10vw 0vw 3vw 0vw
+						text-transform uppercase
+						color $AquaText
+						font-family 'Titulos'
+						font-size $Cuerpo_subtitulo_mobile
+					.texto
+						//font-size 11px
+						line-height 1.6em
+						padding 0vw 10vw
+						color $GrisText
+						margin-bottom 10vw
+						font-family 'Textos'
+						font-size $Cuerpo_textos_mobile
+				&-barras
+					.cssProgress
+						width 80vw
+						margin 5vw 10vw
+					.cssProgress .progress3
+						position relative
+						overflow hidden
+						width 100%
+					.cssProgress .cssProgress-bar 
+						width 0%
+						height 100%
+						background #ADCA1E
+						box-shadow inset 0px -1px 2px rgba(0, 0, 0, 0.1)
+						-webkit-transition width 0.8s ease-in-out
+						transition width 0.8s ease-in-out
+					.cssProgress .cssProgress-label 
+						position absolute
+						left 0
+						top 5px
+						overflow hidden
+						color white
+						font-size 18px
+						text-align left
+						text-shadow 0px 1px rgba(0, 0, 0, 0.3)
+					
+					.cssProgress .cssProgress-active 
+						background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent)
+						background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent)
+						background-size: 35px 35px
+					.cssProgress .cssProgress-active
+						-webkit-animation cssProgressActive 2s linear infinite
+						-ms-animation cssProgressActive 2s linear infinite
+						animation cssProgressActive 2s linear infinite
+					@keyframes cssProgressActive {
+						0% {
+						background-position 0 0
+						}
+						100% {
+						background-position 35px 35px
+						}
+					}
+
+					.progress3
+						width auto !important
+						padding 4px
+						background-color rgba(0, 0, 0, 0.1)
+						box-shadow inset 0px 1px 2px rgba(0, 0, 0, 0.2)
+						border-radius 3px
+					.progress3 .cssProgress-bar 
+						height 25px
+						border-radius 3px
+					.progress3 .cssProgress-label
+						margin-left 3vw
+						line-height 26px
+			footer
+				text-align center
+				border-top solid 10px $CelesteText
+				width 100vw
+				position relative
+				left 0
+				bottom 0
+				height 150px	
+				background $Gris
+				display flex
+				flex-direction column
+				flex-wrap wrap
+				justify-content space-around
+@media (min-width:768px)
+	body
+		.global
+			.header
+				width 100vw
+				height 100px
+				background white
+				display flex
+				flex-wrap wrap
+				flex-direction row
+				justify-content space-between
+				background-image url('../img/header-service.jpg')
+				background-size cover
+				&-txt
+					display flex
+					flex-direction row
+					&-button
+						display none
+					&-titulos
+						font-family 'Titulos'
+						display flex
+						flex-direction column
+						h1
+							color $CelesteText
+							margin 20px 15px 10px 15px
+						h4
+							color $GrisText
+							margin-left 15px
+							span
+								color $VerdeText
+							
+					&-logo
+						display inline
+						margin-left 20px
+						margin-top 20px
+						width 90px
+						height 60px
+						padding 0 15px 0 0
+						border-right solid 2px $GrisText
+				.Menu-lista
+					background transparent
+					position static
+					width auto
+					height auto
+					opacity 1
+					.cerrar
+						display none
+					.flex-menu
+						img
+							display none
+						&-item
+							display inline-block
+							font-family 'Titulos'
+							margin 0
+							padding 0vw 3vw
+							margin 25px 0vh
+							font-size 16px
+							height 30px
+							line-height 30px
+							border-bottom 0px
+							border-right solid 1px $VerdeText
+						&-item:nth-child(5)
+							border-right 0px
+							&-link
+								color $VerdeText
+								text-decoration none !important
+								display block
+			.content
+				margin-top 100px
+				position relative
+				width 100vw
+				transition all .9s ease-in
+				&-especialidad
+					padding-top 1vw
+					display flex
+					flex-direction row
+					justify-content space-between
+					&-texto
+						width 35vw
+						margin-top 8vw
+						.titulo
+							//font-size 40px
+							font-family 'Titulos'
+							font-size $Cuerpo_subtitulo_tablet
+							padding 0vw 1vw 3vw 3vw
+							text-transform uppercase
+							color $AquaText
+						.texto
+							//font-size 16px
+							font-family 'Textos'
+							font-size $Cuerpo_textos_tablet
+							line-height 1.6em
+							padding 0vw 1vw 0vw 5vw
+							color $GrisText
+					&-cuadros
+						display flex
+						flex-direction row
+						justify-content center
+						flex-wrap wrap
+						height 44vw
+						width 60vw
+						margin-right 2vw
+						margin-top 8vw
+						&-contentcard
+							width 20vw
+							height 24vw
+							position relative
+							margin 0
+							-webkit-perspective 800px
+							-moz-perspective 800px
+							-o-perspective 800px
+							perspective 800px
+							&-card
+								width 100%
+								height 100%
+								position absolute
+								-webkit-transition: -webkit-transform 1s;
+								-moz-transition: -moz-transform 1s;
+								-o-transition: -o-transform 1s;
+								transition: transform 1s;
+								-webkit-transform-style: preserve-3d;
+								-moz-transform-style: preserve-3d;
+								-o-transform-style: preserve-3d;
+								transform-style: preserve-3d;
+								color $GrisText
+								&.active
+									-webkit-transform: rotateY( 180deg );
+									-moz-transform: rotateY( 180deg );
+									-o-transform: rotateY( 180deg);
+									transform: rotateY( 180deg);
+								.front
+									background transparent
+									margin 0
+									display block
+									height 100%
+									width 100%
+									position absolute
+									-webkit-backface-visibility: hidden;
+									-moz-backface-visibility: hidden;
+									-o-backface-visibility: hidden;
+									backface-visibility: hidden;
+									i
+										color $AquaText
+										font-size 4vw
+										margin 5vw 0vw 0vw 0vw
+									p
+										margin 1vw 0vw 0vw 0vw
+								.back
+									display block
+									height 100%
+									width 100%
+									position absolute
+									-webkit-backface-visibility: hidden;
+									-moz-backface-visibility: hidden;
+									-o-backface-visibility: hidden;
+									backface-visibility: hidden;
+									margin 0
+									border dashed 1px $AquaText
+									background transparent
+									background-color white
+									-webkit-transform: rotateY(180deg);
+									-moz-transform: rotateY(180deg);
+									-o-transform: rotateY(180deg);
+									transform: rotateY(180deg);
+									i
+										color $CelesteText
+										font-size 4vw
+										margin 2vw 0%
+									p
+										margin 1vw 0%
+									h6
+										font-size 14px
+										line-height 1rem
+										margin 1vw .5vw
+				&-aptitudes
+					margin-top 80px
+					text-align center
+					&-texto
+						.titulo
+							//font-size 40px
+							font-family 'Titulos'
+							font-size $Cuerpo_subtitulo_tablet
+							padding 0vw 0vw 3vw 0vw
+							text-transform uppercase
+							color $AquaText
+						.texto
+							text-align justify
+							//font-size 20px
+							font-family 'Textos'
+							font-size $Cuerpo_textos_tablet
+							line-height 1.6em
+							padding 0vw 10vw
+							color $GrisText
+							margin-bottom 10vw
+					&-line
+						display flex
+						flex-direction row
+						position relative
+						.linea
+							z-index -5
+							position absolute
+							left 5vw
+							width 88vw
+							border solid 2px $CelesteText
+							height 0px
+							min-height 0px
+							max-height 0px
+						.pack
+							z-index 2
+							width 40vw
+							color $GrisText
+							margin -7vw 0px 0vw 0vw
+							.feature
+								margin 0 auto
+								background $CelesteText
+								width 15vw
+								height 15vw
+								line-height 16vw
+								font-size 70px
+								border-radius 100%
+								color white
+							.titulo
+								padding 5px
+								background white
+				&-autoevaluacion
+					text-align center
+					display flex
+					flex-direction row
+					flex-wrap wrap
+					&-texto
+						width 35vw
+						.titulo
+							//font-size 35px
+							padding 8vw 0vw 2vw 0vw
+							text-transform uppercase
+							color $AquaText
+							font-family 'Titulos'
+							font-size $Cuerpo_subtitulo_tablet
+						.texto
+							//font-size 18px
+							line-height 1.6em
+							padding 2vw 1vw 0vw 1vw
+							color $GrisText
+							margin-bottom 10vw
+							font-family 'Textos'
+							font-size $Cuerpo_textos_tablet
+					&-barras
+						.cssProgress
+							width 60vw
+							margin 3vw 2.5vw
+						.cssProgress .progress3
+							position relative
+							overflow hidden
+							width 100%
+						.cssProgress .cssProgress-bar 
+							width 0%
+							height 100%
+							background #ADCA1E
+							box-shadow inset 0px -1px 2px rgba(0, 0, 0, 0.1)
+							-webkit-transition width 0.8s ease-in-out
+							transition width 0.8s ease-in-out
+						.cssProgress .cssProgress-label 
+							position absolute
+							left 0
+							top 5px
+							overflow hidden
+							color white
+							font-size 18px
+							text-align left
+							text-shadow 0px 1px rgba(0, 0, 0, 0.3)
+						
+						.cssProgress .cssProgress-active 
+							background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent)
+							background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent)
+							background-size: 35px 35px
+						.cssProgress .cssProgress-active
+							-webkit-animation cssProgressActive 2s linear infinite
+							-ms-animation cssProgressActive 2s linear infinite
+							animation cssProgressActive 2s linear infinite
+						@keyframes cssProgressActive {
+							0% {
+							background-position 0 0
+							}
+							100% {
+							background-position 35px 35px
+							}
+						}
+
+						.progress3
+							width auto !important
+							padding 4px
+							background-color rgba(0, 0, 0, 0.1)
+							box-shadow inset 0px 1px 2px rgba(0, 0, 0, 0.2)
+							border-radius 3px
+						.progress3 .cssProgress-bar 
+							height 30px
+							border-radius 3px
+						.progress3 .cssProgress-label
+							margin-left 3vw
+							line-height 30px
+				footer
+					text-align center
+					border-top solid 10px $CelesteText
+					width 100vw
+					position relative
+					left 0
+					bottom 0
+					height 150px	
+					background $Gris
+					display flex
+					flex-direction column
+					flex-wrap wrap
+					justify-content space-around
+@media (min-width:1024px)
+	body
+		.global
+			.header
+			.content
+				&-especialidad
+					padding-top 1vw
+					display flex
+					flex-direction row
+					justify-content space-between
+					&-texto
+						width 35vw
+						margin-top 8vw
+						.titulo
+							//font-size 40px
+							font-family 'Titulos'
+							font-size $Cuerpo_subtitulo_desktop
+							padding 0vw 1vw 3vw 3vw
+							text-transform uppercase
+							color $AquaText
+						.texto
+							//font-size 16px
+							font-family 'Textos'
+							font-size $Cuerpo_textos_desktop
+							line-height 1.6em
+							padding 0vw 1vw 0vw 5vw
+							color $GrisText
+					&-cuadros
+						display flex
+						flex-direction row
+						justify-content center
+						flex-wrap wrap
+						height 32vw
+						width 60vw
+						margin-right 2vw
+						margin-top 8vw
+						&-contentcard
+							width 20vw
+							height 16vw
+							position relative
+							margin 0
+							-webkit-perspective 800px
+							-moz-perspective 800px
+							-o-perspective 800px
+							perspective 800px
+				&-aptitudes
+					margin-top 100px
+					&-texto
+						.titulo
+							font-family 'Titulos'
+							font-size $Cuerpo_subtitulo_desktop
+						.texto
+							font-family 'Textos'
+							font-size $Cuerpo_textos_desktop
+				&-autoevaluacion
+					&-texto
+						.titulo
+							font-family 'Titulos'
+							font-size $Cuerpo_subtitulo_desktop
+						.texto
+							font-family 'Textos'
+							font-size $Cuerpo_textos_desktop
+@media (min-width:2560px)
+	body
+		.global
+				.header
+					width 100vw
+					height 170px
+					background white
+					display flex
+					flex-wrap wrap
+					flex-direction row
+					justify-content space-between
+					background-image url('../img/header-service.jpg')
+					background-size cover
+					&-txt
+						display flex
+						flex-direction row
+						&-button
+							display none
+						&-titulos
+							font-family 'Titulos'
+							display flex
+							flex-direction column
+							h1
+								font-size 40px
+								color $CelesteText
+								margin 40px 30px 20px 30px
+							h4
+								font-size 25px
+								color $GrisText
+								margin-left 30px
+								span
+									color $VerdeText
+								
+						&-logo
+							display inline
+							margin-left 20px
+							margin-top 20px
+							width 180px
+							height 120px
+							padding 0 15px 0 0
+							border-right solid 2px $GrisText
+					.Menu-lista
+						background transparent
+						position static
+						width auto
+						height auto
+						opacity 1
+						.cerrar
+							display none
+						.flex-menu
+							img
+								display none
+							&-item
+								display inline-block
+								font-family 'Titulos'
+								margin 0
+								padding 0vw 3vw
+								margin 25px 0vh
+								font-size 46px
+								height 120px
+								line-height 120px
+								border-bottom 0px
+								border-right solid 1px $VerdeText
+							&-item:nth-child(5)
+								border-right 0px
+								&-link
+									color $VerdeText
+									text-decoration none !important
+									display block
+				.content
+					margin-top 170px
+					position relative
+					width 100vw
+					transition all .9s ease-in
+					&-especialidad
+						padding-top 1vw
+						display flex
+						flex-direction row
+						justify-content space-between
+						&-texto
+							width 35vw
+							margin-top 4vw
+							.titulo
+								font-size 80px
+								padding 0vw 1vw 3vw 3vw
+								text-transform uppercase
+								color $AquaText
+							.texto
+								font-size 46px
+								line-height 1.6em
+								padding 0vw 1vw 0vw 5vw
+								color $GrisText
+						&-cuadros
+							display flex
+							flex-direction row
+							justify-content center
+							flex-wrap wrap
+							height 34vw
+							width 60vw
+							margin-right 2vw
+							&-contentcard
+								width 20vw
+								height 18vw
+								position relative
+								margin 0
+								-webkit-perspective 800px
+								-moz-perspective 800px
+								-o-perspective 800px
+								perspective 800px
+								&-card
+									width 100%
+									height 100%
+									position absolute
+									-webkit-transition: -webkit-transform 1s;
+									-moz-transition: -moz-transform 1s;
+									-o-transition: -o-transform 1s;
+									transition: transform 1s;
+									-webkit-transform-style: preserve-3d;
+									-moz-transform-style: preserve-3d;
+									-o-transform-style: preserve-3d;
+									transform-style: preserve-3d;
+									color $GrisText
+									&.active
+										-webkit-transform: rotateY( 180deg );
+										-moz-transform: rotateY( 180deg );
+										-o-transform: rotateY( 180deg);
+										transform: rotateY( 180deg);
+									.front
+										background transparent
+										margin 0
+										display block
+										height 100%
+										width 100%
+										position absolute
+										-webkit-backface-visibility: hidden;
+										-moz-backface-visibility: hidden;
+										-o-backface-visibility: hidden;
+										backface-visibility: hidden;
+										i
+											color $AquaText
+											font-size 4vw
+											margin 5vw 0vw 0vw 0vw
+										p
+											font-size 50px
+											margin 1vw 0vw 0vw 0vw
+									.back
+										display block
+										height 100%
+										width 100%
+										position absolute
+										-webkit-backface-visibility: hidden;
+										-moz-backface-visibility: hidden;
+										-o-backface-visibility: hidden;
+										backface-visibility: hidden;
+										margin 0
+										border dashed 1px $AquaText
+										background transparent
+										background-color white
+										-webkit-transform: rotateY(180deg);
+										-moz-transform: rotateY(180deg);
+										-o-transform: rotateY(180deg);
+										transform: rotateY(180deg);
+										i
+											color $CelesteText
+											font-size 4vw
+											margin 2vw 0%
+										p
+											font-size 50px
+											margin 1vw 0%
+										h6
+											font-size 34px
+											line-height 50px
+											margin 1vw .5vw
+					&-aptitudes
+						margin-top 80px
+						text-align center
+						&-texto
+							.titulo
+								font-size 80px
+								padding 0vw 0vw 3vw 0vw
+								text-transform uppercase
+								color $AquaText
+							.texto
+								text-align justify
+								font-size 46px
+								line-height 1.6em
+								padding 0vw 10vw
+								color $GrisText
+								margin-bottom 10vw
+						&-line
+							display flex
+							flex-direction row
+							position relative
+							.linea
+								z-index -5
+								position absolute
+								left 5vw
+								width 88vw
+								border solid 2px $CelesteText
+								height 0px
+								min-height 0px
+								max-height 0px
+							.pack
+								z-index 2
+								width 40vw
+								color $GrisText
+								margin -7vw 0px 0vw 0vw
+								.feature
+									margin 0 auto
+									background $CelesteText
+									width 15vw
+									height 15vw
+									line-height 16vw
+									font-size 170px
+									border-radius 100%
+									color white
+								.titulo
+									font-size 46px
+									padding 25px
+									background white
+					&-autoevaluacion
+						text-align center
+						display flex
+						flex-direction row
+						flex-wrap wrap
+						&-texto
+							width 35vw
+							.titulo
+								font-size 80px
+								padding 8vw 0vw 2vw 0vw
+								text-transform uppercase
+								color $AquaText
+							.texto
+								font-size 46px
+								line-height 1.6em
+								padding 2vw 1vw 0vw 1vw
+								color $GrisText
+								margin-bottom 10vw
+						&-barras
+							.cssProgress
+								width 60vw
+								margin 3vw 2.5vw
+							.cssProgress .progress3
+								position relative
+								overflow hidden
+								width 100%
+							.cssProgress .cssProgress-bar 
+								width 0%
+								height 100%
+								background #ADCA1E
+								box-shadow inset 0px -1px 2px rgba(0, 0, 0, 0.1)
+								-webkit-transition width 0.8s ease-in-out
+								transition width 0.8s ease-in-out
+							.cssProgress .cssProgress-label 
+								position absolute
+								left 0
+								top 5px
+								overflow hidden
+								color white
+								font-size 48px
+								text-align left
+								text-shadow 0px 1px rgba(0, 0, 0, 0.3)
+							
+							.cssProgress .cssProgress-active 
+								background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent)
+								background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent)
+								background-size: 35px 35px
+							.cssProgress .cssProgress-active
+								-webkit-animation cssProgressActive 2s linear infinite
+								-ms-animation cssProgressActive 2s linear infinite
+								animation cssProgressActive 2s linear infinite
+							@keyframes cssProgressActive {
+								0% {
+								background-position 0 0
+								}
+								100% {
+								background-position 35px 35px
+								}
+							}
+
+							.progress3
+								width auto !important
+								padding 4px
+								background-color rgba(0, 0, 0, 0.1)
+								box-shadow inset 0px 1px 2px rgba(0, 0, 0, 0.2)
+								border-radius 3px
+							.progress3 .cssProgress-bar 
+								height 80px
+								border-radius 3px
+							.progress3 .cssProgress-label
+								margin-left 3vw
+								line-height 80px
+					footer
+						font-size 40px
+						text-align center
+						border-top solid 10px $CelesteText
+						width 100vw
+						position relative
+						left 0
+						bottom 0
+						height 350px	
+						background $Gris
+						display flex
+						flex-direction column
+						flex-wrap wrap
+						justify-content space-around
+//@media (min-width:5120px)
+

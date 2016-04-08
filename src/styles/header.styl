@@ -1,0 +1,52 @@
+.header	
+	position fixed
+	z-index 10
+	top 0
+	left 0
+	width 100vw
+	&-txt-logo
+		display none				
+	&-txt-button
+		position absolute
+		left 10px
+		top 10px
+		width 25px
+		height 25px
+	&-txt-titulos
+		display none
+	.Menu-lista
+		z-index 2
+		width 100vw
+		height 100vh
+		position absolute
+		top 0
+		left -100vw
+		background-color black
+		opacity .8
+		transition left 0.3s ease-in
+		text-align center
+		display flex
+		flex-direction column
+		
+		&.active
+			left 0
+		.cerrar
+			align-self flex-end
+			margin 3vh 20vw 0vh 0vw
+		.flex-menu
+			list-style none
+			img
+				margin 3vh 0vw 0vh 0vw
+				width 50%
+			&-item
+				font-family 'Titulos'
+				margin 0 20vw
+				font-size 20px
+				text-align center
+				height 80px
+				line-height 80px
+				border-bottom: solid 1px white
+				&-link
+					color $VerdeText
+					text-decoration none !important
+					display block

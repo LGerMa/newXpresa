@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, user-scalable=no" initial-scale="1"><title>Lanza tus mejores ideas!</title></head><body><div class="global"><header id="encabezado" class="header"><div class="header-txt"><img id="botoncito" src="./img/menuiconhome.png" class="header-txt-button"><img src="./img/logo.png" class="header-txt-logo"><div class="header-txt-titulos"><h1>BIENVENIDO</h1><h4>Bienvenido <span>&#62; Home</span></h4></div></div><nav><ul id="mimenu" class="Menu-lista"><img src="./img/close.png" id="close" class="cerrar"><div class="flex-menu"><div><img src="./img/logowhite.png"></div><li class="flex-menu-item"><a href="index.html" class="flex-menu-item-link">Home</a></li><li class="flex-menu-item"><a href="./pag/services.html" class="flex-menu-item-link">Servicios</a></li><li class="flex-menu-item"><a href="./pag/team.html" class="flex-menu-item-link">Equipo</a></li><li class="flex-menu-item"><a href="./pag/contacto.html" class="flex-menu-item-link">Contacto</a></li></div></ul></nav></header><article id="contenedor" class="content"><section class="content-slide"><figure><picture><source media="(min-width: 1024px)" srcset="./img/slide-1-desktop.jpg"><source media="(min-width: 768px)" srcset="./img/slide-1-mobileretina.jpg 2x"><source media="(min-width: 320px)" srcset="./img/slide-1-mobile.jpg"><img src="./img/slide-1-desktop.jpg"></picture><picture><source media="(min-width: 1024px)" srcset="./img/slide-2-desktop.png"><source media="(min-width: 768px)" srcset="./img/slide-2-mobileretina.png 2x"><source media="(min-width: 320px)" srcset="./img/slide-2-mobile.png"><img src="./img/slide-2-desktop.png"></picture><picture><source media="(min-width: 1024px)" srcset="./img/slide-3-desktop.png"><source media="(min-width: 768px)" srcset="./img/slide-3-mobileretina.png 2x"><source media="(min-width: 320px)" srcset="./img/slide-3-mobile.png"><img src="./img/slide-3-desktop.png"></picture></figure></section><div class="content-text-efecto"><div class="content-text-efecto-encima"><p class="titulo">¿Que hacemos?</p><p class="texto">Un gran empresario dijo una vez: "Si no estás en Internet, no existes". En otras palabras, si tu tienes una marca y no hay presencia de ella en la web, es muy probable que tu negocio no alcance un buen posicionamiento a comparación de otros.</p><p class="texto">La informática y el Diseño Gráfico, nos ayudan a impulsar a pequeñas y grandes empresas llevándolos a escalar vertiginosamente dentro del mercado gracias a nuevas herramientas digitales con altos estándares de calidad acompañado de nuestro equipo especializado.</p><picture><source media="(min-width: 1024px)" srcset="./img/banner-service-desktop.jpg"><source media="(min-width: 768px)" srcset="./img/banner-service-mobileretina.jpg 2x"><source media="(min-width: 320px)" srcset="./img/banner-service-mobile.jpg"><img src="./img/banner-service-mobile.jpg"></picture><!--div(class="encima-footer")h2(class="encima-footer-titulo") ¿De qué manera podemos ayudarte?
+p(class="encima-footer-parrafo") Conoce nuestros principales servicios
+a(href="./pag/services.html", class="encima-footer-button") Ver Más--></div></div><footer><p>(+503 71900165)</p><p>cuentanos@xpresaweb.com</p><p>CopyRight XpresaWeb</p><p>All Right Reserver</p></footer></article></div></body><script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.6/hammer.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-64357808-1', 'auto');
+ga('send', 'pageview');</script><script>
+(function(){
+
+document.addEventListener('DOMContentLoaded', OnDomLoad);
+
+function OnDomLoad(){
+function loadCSS(url)
+{
+	var elem = document.createElement('link');
+	elem.rel ='stylesheet';
+	elem.href = url;
+	document.head.appendChild(elem);
+}
+
+loadCSS('./css/main.css');
+
+var boton = document.getElementById('botoncito');
+var menu = document.getElementById('mimenu');
+var close = document.getElementById('close');
+var hammerPanel = new Hammer(document.querySelector("#contenedor"));
+var hammerSide = new Hammer(menu);
+var encabezado = document.getElementById('encabezado');
+var textosheader = document.getElementById('textos');
+
+document.addEventListener('scroll', function (){
+	if(window.scrollY>10)
+		{
+		encabezado.classList.add('light');
+		}
+	else
+		{
+		encabezado.classList.remove('light');
+		}
+});
+
+hammerPanel.on('swiperight', function(){
+menu.classList.toggle('active');
+document.querySelector("#contenedor").classList.toggle('active');
+boton.style.display="none";
+});
+
+hammerSide.on('swipeleft', function(){		
+document.querySelector("#contenedor").classList.toggle('active');
+menu.classList.toggle('active');
+boton.style.display="inline";
+});
+
+boton.addEventListener('click', function(){
+	menu.classList.toggle('active');
+	document.querySelector("#contenedor").classList.toggle('active');
+	boton.style.display="none";
+});
+
+close.addEventListener('click', function(){
+	menu.classList.toggle('active');
+	document.querySelector("#contenedor").classList.toggle('active');
+	boton.style.display="inline";
+});
+
+}
+}());</script></html>
