@@ -22,8 +22,8 @@ $Header_subtitulo_tablet = 17px
 $Header_menu_tablet = 18px
 $Header_titulo_mobile = 27px
 $Header_subtitulo_mobile = 16px
-$Cuerpo_textos_desktop = 21px
-$Cuerpo_subtitulo_desktop = 35px
+$Cuerpo_textos_desktop = 31px
+$Cuerpo_subtitulo_desktop = 65px
 $Cuerpo_textos_tablet = 17px
 $Cuerpo_subtitulo_tablet = 29px
 $Cuerpo_textos_mobile = 16px
@@ -173,6 +173,12 @@ body
 							border-radius 5px
 							margin-top 10px
 							color $GrisText
+						.response
+							width 80vw
+							//height 5vw
+							margin-top 1vw
+							margin-left 10vw
+							background-color $AquaText
 						button
 							font-family 'Titulos'
 							font-weight bold
@@ -350,12 +356,18 @@ body
 									margin-top 2vw
 									margin-left 5vw
 									color $GrisText
+								.response
+									width 25vw
+									//height 5vw
+									margin-top 1vw
+									margin-left 5vw
+									background-color $AquaText
 							.elboton
 								width 100%
 								text-align left
 								button
 									margin-left 5vw
-									margin-top 3vw
+									margin-top 2vw
 									font-family 'Titulos'
 									font-weight bold
 									text-transform uppercase
@@ -408,6 +420,192 @@ body
 					flex-direction column
 					flex-wrap wrap
 					justify-content space-around
+/*@media (min-width:1024px)
+	body
+		.global
+			.header
+				width 100vw
+				height 100px
+				background white
+				display flex
+				flex-wrap wrap
+				flex-direction row
+				justify-content space-between
+				background-image url('../img/header-desktop-contacto.png')
+				background-size cover
+				&-txt
+					display flex
+					flex-direction row
+					&-button
+						display none
+					&-titulos
+						font-family 'Titulos'
+						display flex
+						flex-direction column
+						h1
+							color $CelesteText
+							margin 20px 15px 10px 15px
+						h4
+							color $GrisText
+							margin-left 15px
+							span
+								color $VerdeText
+							
+					&-logo
+						display inline
+						margin-left 20px
+						margin-top 20px
+						width 90px
+						height 60px
+						padding 0 15px 0 0
+						border-right solid 2px $GrisText
+				.Menu-lista
+					background transparent
+					position static
+					width auto
+					height auto
+					opacity 1
+					.cerrar
+						display none
+					.flex-menu
+						img
+							display none
+						&-item
+							display inline-block
+							font-family 'Titulos'
+							margin 0
+							padding 0vw 3vw
+							margin 25px 0vh
+							font-size 16px
+							height 30px
+							line-height 30px
+							border-bottom 0px
+							border-right solid 1px $VerdeText
+						&-item:nth-child(5)
+							border-right 0px
+							&-link
+								color $VerdeText
+								text-decoration none !important
+								display block
+			.content
+				position relative
+				width 100vw
+				transition all .9s ease-in
+				&-contactanos
+					display flex
+					flex-direction row
+					justify-content space-between
+					&-texto
+						width 100vw
+						.titulo
+							//font-size 40px
+							text-transform uppercase
+							color $AquaText
+							font-size $Cuerpo_subtitulo_desktop
+							font-family 'Titulos'
+						.texto
+							//font-size 16px
+							font-family 'Textos'
+							font-size $Cuerpo_textos_desktop
+							line-height 1.6em
+							padding 0vw 10vw
+							color $GrisText
+							margin-bottom 30px
+				&-formulario
+					background #DCDCDC
+					text-align center
+					display flex
+					flex-direction row
+					&-form
+						order 1
+						height 35vw
+						&-form
+							font-size 25px
+							display flex
+							flex-direction row
+							flex-wrap wrap
+							.losinput
+								width 30vw
+								input
+									text-align center
+									width 25vw
+									border-radius 5px
+									height 5vw
+									margin-top 2vw
+									margin-left 5vw
+									color $GrisText
+							.eltextarea
+								width 30vw
+								textarea
+									text-align center
+									padding 1vw
+									width 23vw
+									height 18vw
+									border-radius 5px
+									margin-top 2vw
+									margin-left 5vw
+									color $GrisText
+							.elboton
+								width 100%
+								text-align left
+								button
+									margin-left 5vw
+									margin-top 3vw
+									font-family 'Titulos'
+									font-weight bold
+									text-transform uppercase
+									border none
+									font-size 30px
+									align-self flex-start
+									background-color $VerdeText
+									color white
+									border-radius 5px
+									width 12vw
+									height 4vw
+					&-redes
+						order 2
+						text-align left
+						width 40vw
+						height 35vw
+						background #f8f5f1
+						span
+							font-size 31px
+							font-family 'Titulos'
+							display block
+							color $GrisText
+							font-weight bold
+							padding 2.5vw
+						div
+							background $VerdeText
+							display inline-block
+							width 6vw
+							height 6vw
+							line-height 6.2vw
+							overflow hidden
+							text-align center
+							margin-left 2.5vw
+							border-radius 100%
+							font-size 45px
+							color white
+						p
+							font-size 26px
+							font-family 'Textos'
+							color $GrisText
+							margin-left 2.5vw
+				footer
+					text-align center
+					border-top solid 10px $CelesteText
+					width 100vw
+					position relative
+					left 0
+					bottom 0
+					height 250px
+					font-size 31px	
+					background $Gris
+					display flex
+					flex-direction column
+					flex-wrap wrap
+					justify-content space-around*/
 @media (min-width:1024px)
 	body
 		.global
@@ -425,7 +623,7 @@ body
 				flex-wrap wrap
 				flex-direction row
 				justify-content space-between
-				background-image url('../img/header-tablet-contacto.png')
+				background-image url('../img/header-desktop-contacto.png')
 				background-size cover
 				&-txt
 					display flex
@@ -484,6 +682,7 @@ body
 									text-decoration none !important
 									display block
 			.content
+				margin-top 170px
 				width 100vw
 				transition all .9s ease-in
 				&-contactanos
@@ -492,15 +691,17 @@ body
 					justify-content space-between
 					&-texto
 						width 100vw
+						padding 0px
+						margin-top 0px
 						.titulo
-							margin-top 0px
-							//font-size 80px
+							font-size 80px !important
+							padding 3vw 0vw
 							text-transform uppercase
 							color $AquaText
 							font-size $Cuerpo_subtitulo_desktop
 							font-family 'Titulos'
 						.texto
-							//font-size 46px
+							font-size 46px !important
 							line-height 1.6em
 							padding 0vw 10vw
 							color $GrisText

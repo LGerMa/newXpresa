@@ -12,15 +12,15 @@ var config = {
 		output: './build/css'
 	},
 	//para el index
-	html: {
+	/*html: {
 		watch: './src/*.jade',
 		output: './build/'
-	}
+	}*/
 	//para las demas paginas
-	/*html: {
+	html: {
 		watch: './src/pag/*.jade',
 		output: './build/pag'
-	}*/
+	}
 	,
 	imagenes: {
 		watch:['./build/img/*.png', './build/img/*.jpg'],

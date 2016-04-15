@@ -22,8 +22,8 @@ $Header_subtitulo_tablet = 17px
 $Header_menu_tablet = 18px
 $Header_titulo_mobile = 27px
 $Header_subtitulo_mobile = 16px
-$Cuerpo_textos_desktop = 21px
-$Cuerpo_subtitulo_desktop = 35px
+$Cuerpo_textos_desktop = 31px
+$Cuerpo_subtitulo_desktop = 65px
 $Cuerpo_textos_tablet = 17px
 $Cuerpo_subtitulo_tablet = 29px
 $Cuerpo_textos_mobile = 16px
@@ -291,6 +291,169 @@ body
 								font-size $Cuerpo_subtitulo_tablet
 							.texto
 								font-size $Cuerpo_textos_tablet
+/*@media (min-width:1024px)
+	.global
+		.header
+			width 100vw
+			height 170px
+			background white
+			display flex
+			flex-wrap wrap
+			flex-direction row
+			justify-content space-between
+			background-image url('../img/header.png')
+			background-size cover
+			&.light
+				opacity 1
+			&-txt
+				display flex
+				flex-direction row
+				&-button
+					display none
+				&-titulos
+					font-family 'Titulos'
+					display flex
+					flex-direction column
+					h1
+						font-size 40px
+						color $CelesteText
+						margin 40px 30px 20px 30px
+					h4
+						font-size 25px
+						color $GrisText
+						margin-left 30px
+						span
+							color $VerdeText
+						
+				&-logo
+					display inline
+					margin-left 20px
+					margin-top 20px
+					width 180px
+					height 120px
+					padding 0 15px 0 0
+					border-right solid 2px $GrisText
+			.Menu-lista
+				background transparent
+				position static
+				width auto
+				height auto
+				opacity 1
+				.cerrar
+					display none
+				.flex-menu
+					img
+						display none
+					&-item
+						display inline-block
+						font-family 'Titulos'
+						margin 0
+						padding 0vw 3vw
+						margin 25px 0vh
+						font-size 46px
+						height 120px
+						line-height 120px
+						border-bottom 0px
+						border-right solid 1px $VerdeText
+					&-item:nth-child(5)
+						border-right 0px
+						&-link
+							color $VerdeText
+							text-decoration none !important
+							display block
+		.content
+			position relative
+			width 100vw
+			transition all .9s ease-in
+			&.active
+				filter: blur(20px); 
+				-webkit-filter: blur(20px); 
+				-moz-filter: blur(20px);
+				-o-filter: blur(20px);
+				-ms-filter: blur(20px);
+			&-slide
+				overflow hidden
+				figure
+					position relative
+					width 300%
+					height 50%
+					margin 0
+					left 0
+					max-width 300% !important
+					animation 8s slidy infinite alternate
+					picture
+						img
+							display inline
+							z-index -2
+							width 100vw
+							height 50%
+			&-text					
+				&-efecto
+					position relative
+					margin-top -80px
+					width 0px
+					border-left 50vw solid #fff
+					border-right 50vw solid #fff
+					border-top 35px solid transparent
+					&-encima
+						position relative
+						margin-left -50vw
+						width 100vw
+						text-align center
+						.titulo
+							font-weight bold
+							font-size 60px !important
+							margin 1rem 0
+							margin-top 5vw
+							text-transform uppercase
+							color $VerdeText
+						.texto
+							text-align justify
+							font-size 30px !important
+							line-height 1.6em
+							padding 2vw 10vw
+							color $GrisText
+						picture
+							img
+								position relative
+								width 100vw
+								height 350px !important
+								padding 0
+								margin 0 0
+						.encima-footer
+							position relative
+							height 30vh
+							line-height 10vh
+							margin-top -30vh
+							&-titulo
+								padding 1px 3px
+								font-size 52px
+								text-transform uppercase
+							&-parrafo
+								font-size 18px
+							&-button
+								border none
+								padding 8px 16px
+								border-radius 5px
+								background $CelesteText
+								line-height 30px
+								color white
+								font-weight bold
+								border-bottom solid 2px $VerdeText
+		footer
+			font-size 30px
+			text-align center
+			border-top solid 10px $CelesteText
+			width 100vw
+			position relative
+			left 0
+			bottom 0
+			height 250px !important	
+			background $Gris
+			display flex
+			flex-direction column
+			flex-wrap wrap
+			justify-content space-around*/
 @media (min-width:2560px)
 	body
 		.global
@@ -362,95 +525,94 @@ body
 								color $VerdeText
 								text-decoration none !important
 								display block
-		.content
-			position relative
-			width 100vw
-			transition all .9s ease-in
-			&.active
-				filter: blur(20px); 
-				-webkit-filter: blur(20px); 
-				-moz-filter: blur(20px);
-				-o-filter: blur(20px);
-				-ms-filter: blur(20px);
-			&-slide
-				overflow hidden
-				figure
-					position relative
-					width 300%
-					height 50%
-					margin 0
-					left 0
-					max-width 300% !important
-					animation 8s slidy infinite alternate
-					picture
-						img
-							display inline
-							z-index -2
-							width 100vw
-							height 50%
-			&-text					
-				&-efecto
-					position relative
-					margin-top -80px
-					width 0px
-					border-left 50vw solid #fff
-					border-right 50vw solid #fff
-					border-top 35px solid transparent
-					&-encima
+			.content
+				position relative
+				width 100vw
+				transition all .9s ease-in
+				&.active
+					filter: blur(20px); 
+					-webkit-filter: blur(20px); 
+					-moz-filter: blur(20px);
+					-o-filter: blur(20px);
+					-ms-filter: blur(20px);
+				&-slide
+					overflow hidden
+					figure
 						position relative
-						margin-left -50vw
-						width 100vw
-						text-align center
-						.titulo
-							font-weight bold
-							//font-size 40px
-							font-size $Cuerpo_subtitulo_desktop
-							margin 1rem 0
-							text-transform uppercase
-							color $VerdeText
-						.texto
-							text-align justify
-							//font-size 25px
-							font-size $Cuerpo_textos_desktop
-							line-height 1.6em
-							padding 2vw 10vw
-							color $GrisText
+						width 300%
+						height 50%
+						margin 0
+						left 0
+						max-width 300% !important
+						animation 8s slidy infinite alternate
 						picture
 							img
-								position relative
+								display inline
+								z-index -2
 								width 100vw
-								height 250px
-								padding 0
-								margin 0 0
-						.encima-footer
+								height 50%
+				&-text					
+					&-efecto
+						position relative
+						margin-top -80px
+						width 0px
+						border-left 50vw solid #fff
+						border-right 50vw solid #fff
+						border-top 35px solid transparent
+						&-encima
 							position relative
-							height 30vh
-							line-height 10vh
-							margin-top -30vh
-							&-titulo
-								padding 1px 3px
-								font-size 52px
-								text-transform uppercase
-							&-parrafo
-								font-size 18px
-							&-button
-								border none
-								padding 8px 16px
-								border-radius 5px
-								background $CelesteText
-								line-height 30px
-								color white
+							margin-left -50vw
+							width 100vw
+							text-align center
+							.titulo
 								font-weight bold
-								border-bottom solid 2px $VerdeText
+								font-size 80px !important
+								margin 1rem 0
+								margin-top 5vw
+								text-transform uppercase
+								color $VerdeText
+							.texto
+								text-align justify
+								font-size 46px !important
+								line-height 1.6em
+								padding 2vw 10vw
+								color $GrisText
+							picture
+								img
+									position relative
+									width 100vw
+									height 450px !important
+									padding 0
+									margin 0 0
+							.encima-footer
+								position relative
+								height 30vh
+								line-height 10vh
+								margin-top -30vh
+								&-titulo
+									padding 1px 3px
+									font-size 52px
+									text-transform uppercase
+								&-parrafo
+									font-size 18px
+								&-button
+									border none
+									padding 8px 16px
+									border-radius 5px
+									background $CelesteText
+									line-height 30px
+									color white
+									font-weight bold
+									border-bottom solid 2px $VerdeText
 			footer
-				font-size 40px
+				font-size 40px !important
 				text-align center
 				border-top solid 10px $CelesteText
 				width 100vw
 				position relative
 				left 0
 				bottom 0
-				height 350px	
+				height 350px !important	
 				background $Gris
 				display flex
 				flex-direction column
